@@ -1,0 +1,168 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+body {
+	background-color: #19D1FF;
+}
+
+header {
+	width: 95%;
+	margin-top: 1.4em;
+	margin-right: auto;
+	margin-bottom: 8em;
+	margin-left: auto;
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Lato';
+	font-size: 4.5em;
+}
+
+h2 {
+	font-family: 'Lato';
+	font-size: 2.5em;
+}
+
+.headerText {
+	color: #FFFF82;
+	font-weight: bold;
+	margin-top: .5em;
+	display: inline-block;
+}
+
+.menu {
+	width: 120px;
+	display: inline-block;
+	float: right;
+}
+
+.menu div {
+	background-color: #19FFA3;
+	height: 13px;
+	width: 90px;
+	border-radius: 25px;
+	margin: 10px auto;
+}
+
+.story{
+	margin-bottom: 3em;
+	text-align: center;
+}
+
+.storyTitle {
+	display: inline;
+	position: relative;
+	top: 50%;
+	color: white;
+	font-weight: bold;
+}
+
+#firstStory {
+	height: 200px;
+	background-image: url('../images/pirates.jpg');
+	background-position: 34% 25%;
+}
+
+#secondStory{
+	height: 200px;
+	background-image: url('../images/space.jpg');
+	background-position: 50% 25%;
+}
+
+#thirdStory{
+	height: 200px;
+	background-image: url('../images/flamingo.jpg');
+	background-position: 53% 30%;
+}
+
+.option {
+	opacity: 0.7;
+	height: 200px;
+	width: 15em;
+}
+
+/*Text inside the choice boxes*/
+.option p {
+	margin-top: .5em;
+	color: white;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.leftChoice {
+	float: left;
+}
+
+.rightChoice {
+	float: right;
+}
+
+/*Color of choice boxes*/
+.pirate {
+	background-color: gray;
+}
+
+.space {
+	background-color: red;
+}
+
+.twerk {
+	background-color: purple;
+}
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
