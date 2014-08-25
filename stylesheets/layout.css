@@ -102,6 +102,18 @@ h2 {
 	font-weight: bold;
 }
 
+.storyTextBackground {
+	background-color: teal;
+	height: 800px;
+	opacity: .8;
+	border-radius: 25px;
+}
+
+.storyText {
+	color: white;
+	margin: 2em 1em 2em 1em;
+}
+
 #firstStory {
 	height: 200px;
 	background-image: url('../images/pirates.jpg');
