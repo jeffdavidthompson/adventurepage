@@ -51,6 +51,10 @@ header {
 	text-align: center;
 }
 
+footer {
+	text-align: center;
+}
+
 h1 {
 	font-family: 'Lato';
 	font-size: 4.5em;
@@ -68,6 +72,7 @@ h2 {
 	display: inline-block;
 }
 
+/*Menu refers to the top right*/
 .menu {
 	width: 120px;
 	display: inline-block;
@@ -82,17 +87,31 @@ h2 {
 	margin: 10px auto;
 }
 
+/*This refers to the story blocks, e.g. 'Pirates'*/
 .story{
 	margin-bottom: 3em;
 	text-align: center;
+	border-radius: 20px;
 }
 
 .storyTitle {
 	display: inline;
 	position: relative;
-	top: 50%;
+	top: 45%;
 	color: white;
 	font-weight: bold;
+}
+
+.storyTextBackground {
+	background-color: teal;
+	height: 800px;
+	opacity: .8;
+	border-radius: 25px;
+}
+
+.storyText {
+	color: white;
+	margin: 2em 1em 2em 1em;
 }
 
 #firstStory {
@@ -113,10 +132,12 @@ h2 {
 	background-position: 53% 30%;
 }
 
+/*These are the choice options on the left and right*/
 .option {
 	opacity: 0.7;
 	height: 200px;
 	width: 15em;
+	border-radius: 20px;
 }
 
 /*Text inside the choice boxes*/
