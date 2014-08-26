@@ -61,13 +61,13 @@ function Tree(){
         buttonA.html(this[this.currentAddress+'a'].title)
       }
       else{
-        buttonA.html('Empty')
+        buttonA.html('Choose Your Own Adventure!')
       }
       if (this.hasOwnProperty(this.currentAddress+'b')){
         buttonB.html(this[this.currentAddress+'b'].title)
       }
       else{
-        buttonB.html('Empty')
+        buttonB.html('Choose Your Own Adventure!')
       }
     }
   }
@@ -76,6 +76,8 @@ function Tree(){
     formBox.css('visibility', 'visible')
     titleBox.html('There\'s nothing here yet!')
     contentBox.html('Write the next part of the story')
+    buttonA.css('visibility', 'hidden')
+    buttonB.css('visibility', 'hidden')
   }
 
 }
