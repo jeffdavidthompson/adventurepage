@@ -9,6 +9,7 @@ var submit = $('#submit')
 var titleForm = $('#title-form')
 var contentForm = $('#content-form')
 var isEnding = $('#is-ending')
+var endText = $('#end-text')
 
 function Tree(){
 
@@ -53,8 +54,10 @@ function Tree(){
     if(node.ending){
       buttonA.css('visibility', 'hidden')
       buttonB.css('visibility', 'hidden')
+      endText.html('THE END')
     }
     else{
+      endText.html('')
       buttonA.css('visibility', 'visible')
       buttonB.css('visibility', 'visible')
       if (this.hasOwnProperty(this.currentAddress+'a')){
