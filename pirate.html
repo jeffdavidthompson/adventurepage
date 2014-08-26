@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/pirate.css">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   </head>
-  
+
   <body class='pirate-main-content'>
     <div class='container'>
 
@@ -16,7 +16,7 @@
         <div class="toggleNav">
           <div class="toggleNavButton"></div>
         </div>
-        
+
         <div id="subnav">
           <ul>
             <li> <a href="#">Menu Item</a> </li>
@@ -25,10 +25,10 @@
             <li> <a href="#">Menu Item</a> </li>
           </ul>
         </div>
-      </nav>  
+      </nav>
 
       <header>
-        <h1 class='headerText' id='title'>The High Seas</h1>
+        <h1 class='headerText'>The High Seas</h1>
         <nav class='navigate-story' id='rotate-button'>
           <button class='quarter top-left' id='reset'></button>
           <button class='quarter top-right' id='back'></button>
@@ -37,16 +37,17 @@
         </nav>
       </header>
 
-      <section class='sixteen columns storyBackground' id='content'>
-        <p class='storyText'>
+      <section class='sixteen columns storyBackground'>
+        <h2 id='title'></h2>
+        <p class='storyText' id='content'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur, diam sit amet volutpat egestas, purus nisi auctor tortor, non feugiat quam enim eu tellus. In luctus pretium tortor, non faucibus sapien ullamcorper sed. Vivamus ac elit volutpat, cursus mauris vehicula, vulputate lorem. Nam a neque id dolor molestie pharetra malesuada in eros.
         </p>
-      
-        <button class='story-option pirate' id='a'>Walk the Plank</button>
-        <button class='story-option pirate' id='b'>Option B</button>
+        <h2 id='end-text'></h2>
+        <button class='story-option pirate' id='a'></button>
+        <button class='story-option pirate' id='b'></button>
 
       </section>
-    
+
       <section class='add-content' id='form-box'>
         <input type='text' id='title-form' placeholder='Title...'/><br/>
         <input type='text' id='content-form' placeholder='Content...'/>
@@ -55,13 +56,14 @@
         </p>
         <button class="publish-content" id='submit'>Publish</button>
       </section>
-        
+
       <footer class="sixteen columns">
         <p>footer text</p>
       </footer>
 
     </div><!--end wrapper-->
-    
+    <script type="text/javascript" src="storyTree/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="storyTree/tree.js"></script>
     <script type="text/javascript" src="scripts/pirate.js"></script>
   </body>
 </html>
