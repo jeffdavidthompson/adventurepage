@@ -1,0 +1,120 @@
+/* Pirate Page Layout */
+
+#subnav ul li {
+  display: inline-block;
+}
+
+.navigate-story {
+  display: inline-block;
+}
+
+.pirate-main-content {
+  background: url(../images/tiger.jpg) center no-repeat;
+  background-size: cover;
+  background-position: 30%;
+}
+
+.headerText {
+  text-align: center;
+  padding-bottom: 45px;
+  color: white;
+  font-size: 5em;
+}
+
+.navigate-story {
+  margin-left: 48%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.quarter {
+  width: 50px;
+  height: 50px;
+  background-color: #43ffb2;
+}
+
+.top-left {
+  border-radius: 50px 0 0 0;
+  position: absolute;
+  border-style: none;
+}
+
+.top-right {
+  border-radius: 0 50px 0 0;
+  margin-left: 50px;
+  border-style: none;
+}
+
+.bottom-right {
+  margin-top: -20px;
+  border-radius: 0 0 0 50px;
+  position: absolute;
+}
+
+.bottom-left {
+  margin-top: -20px;
+  border-radius: 0 0 50px 0;
+  position: absolute;
+  margin-left: 50px;
+}
+
+.storyText {
+  font-size: 1.5em;
+  line-height: 1em;
+  font-weight: bold;
+  color: #333333;
+}
+
+.storyBackground {
+  margin: 50px 0 50px 0;
+  padding: 30px 30px 30px 30px;
+  background-color: rgba(61, 198, 23, 0.5);
+}
+
+.story-option {
+  border-style: none;
+  width: 30%;
+  height: 60px;
+  margin: 40px 0px 0px 13%;
+  font-size: 1.5em;
+  color: white;
+}
+
+.pirate#a {
+  background-color: #e21051;
+
+}
+
+.pirate#b {
+  background-color: yellow;
+}
+
+.add-content {
+  margin: 100px 0px 0px 20%;
+}
+
+.add-content input {
+  border: none;
+}
+
+#title-form {
+  width: 80%;
+  height: 30px;
+  margin-bottom: 0px;
+}
+
+#content-form {
+  width: 80%;
+  height: 200px;
+}
+
+.publish-content {
+  width: 25%;
+  height: 45px;
+  margin-left: 28%;
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 1.5em;
+}
