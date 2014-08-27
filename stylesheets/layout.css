@@ -42,7 +42,7 @@ height: 175px;
 }
 
 #thirdStory {
-background: url('../images/flamingo2.jpg') no-repeat;
+background: url('../images/flamingodark.jpg') no-repeat;
 background-position: 50% 20%;
 background-size: 1000px 400px;
 background-color: #ce19ac;
@@ -70,7 +70,7 @@ margin-bottom: 20px;
 }
 
 #thirdStory {
-background: url('../images/flamingo2.jpg') no-repeat;
+background: url('../images/flamingodark.jpg') no-repeat;
 background-position: 50% 20%;
 background-size: 350px 400px;
 background-color: #ce19ac;
@@ -164,11 +164,10 @@ color: #dd1a0b;
 #secondStory{
 background: url('../images/space2.jpg') no-repeat;
 background-size: 100%;
-padding: 2px 0 2px 0;
 }
 
 #thirdStory{
-background: url('../images/flamingo2.jpg') no-repeat;
+background: url('../images/flamingodark.jpg') no-repeat;
 background-position: 50% 5%;
 background-size: 200px;
 background-color: #ce19ac;
