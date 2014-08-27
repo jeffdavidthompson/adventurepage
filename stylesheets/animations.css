@@ -112,6 +112,7 @@ nav {
 
 #firstStory{
     -webkit-transition:background-position 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition:background-position 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 #firstStory:hover{
@@ -122,6 +123,7 @@ nav {
     background-size: 100%;
     background-position: 50% 10%;
     -webkit-transition:background-size 2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    -moz-transition:background-size 2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 
 #secondStory:hover{
