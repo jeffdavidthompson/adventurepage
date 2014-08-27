@@ -19,7 +19,7 @@ var submit = $('#submit');
 var currentAddress = 'x';
 
 var nodes={};
-var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/pirates');
+var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/pirate');
 
 write = function(address, title, content, ending, author){
   nodes[address] = {
