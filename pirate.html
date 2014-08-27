@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/pirate.css">
     <link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
   </head>
 
   <body class='pirate-main-content'>
@@ -36,19 +36,24 @@
       <section class='sixteen columns storyBackground' id='background'>
 
         <h2 id='title'></h2>
-        <h2 id='author'></h2>
+        <h3 id='author'></h3>
         <p class='storyText' id='content'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur, diam sit amet volutpat egestas, purus nisi auctor tortor, non feugiat quam enim eu tellus. In luctus pretium tortor, non faucibus sapien ullamcorper sed. Vivamus ac elit volutpat, cursus mauris vehicula, vulputate lorem. Nam a neque id dolor molestie pharetra malesuada in eros.
         </p>
         <h2 id='end-text'></h2>
+
         <div id='form-box'>
           <input type='text' id='title-form' placeholder='Title...'/>
           <input type='text' id='author-form' placeholder="Author's name"/>
           <textarea id='content-form' placeholder='Content...'></textarea>
-          <button class="publish-content" id='submit'>Publish</button>
-          <p>Is this the end of the story?</p>
-          <input type='checkbox' id='is-ending'/>
-          <ul id='error-box'></ul>
+          <button class='publish-content' id='submit'>Publish</button>
+          
+          <div class='is-ending-content'>
+            <p>Is this the end of the story?</p>
+            <input type='checkbox' id='is-ending'/>
+          </div>
+          
+          <ul id='error-box'></ul> 
         </div>
 
         <nav class='navigate-story'>
