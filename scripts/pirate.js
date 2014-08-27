@@ -1,4 +1,5 @@
 
+/* Change animation to begin when user has won/reached the end
 function displayFish() {
   var elBackground = document.getElementById('background');
   elBackground.style.background = 'url(images/fish1.gif) center repeat-x';
@@ -7,6 +8,7 @@ function displayFish() {
   document.getElementById('content').style.visibility = 'hidden';
   document.getElementById('title').style.visibility = 'hidden';
 }
+*/
 
 function startSpin() {
   document.getElementById('spin-button-overlay').style.webkitAnimationPlayState = 'running';

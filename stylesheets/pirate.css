@@ -91,7 +91,7 @@
   border-style: none;
   width: 35%;
   height: 60px;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -122,10 +122,6 @@
   position: absolute;
 }
 
-#form-box {
-  display: none;
-}
-
 .add-content input {
   margin-left: auto;
   margin-right: auto;
@@ -142,7 +138,7 @@
 }
 
 #content-form {
-  height: 300px;
+  height: 200px;
 }
 
 .add-content p {
@@ -193,7 +189,6 @@ footer {
   margin-top: 10px;
   display: inline-block;
   z-index: -100;
-
 
   background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #ff5aa5 0%, #ef1111 100%);
   background-image: -webkit-radial-gradient(45px 45px, circle cover, #ff5aa5, #ef1111);
