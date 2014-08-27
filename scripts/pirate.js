@@ -1,19 +1,23 @@
-function animateRotateButton() {
-  this.style.transform = 'scale(1.3)';
-  this.style.transition = 'transform 2s';
-  var elBack = document.getElementById('back');
-  elBack.style.background = 'linear-gradient(180deg, #f9f915, #18ea1c)';
-  var elReset = document.getElementById('reset');
-  elReset.style.background = 'linear-gradient(180deg, #f9f915, #18ea1c)';
+
+function displayFish() {
+  var elBackground = document.getElementById('background');
+  elBackground.style.background = 'url(images/fish1.gif) center repeat-x';
+  elBackground.style.backgroundSize = '25%';
+  elBackground.style.backgroundColor = 'rgba(61, 198, 23, 0.5)';
+  document.getElementById('content').style.visibility = 'hidden';
+  document.getElementById('title').style.visibility = 'hidden';
 }
 
-function gradiantSpin() {
-  var elReset = document.getElementById('reset');
-  elReset.style.backgroundColor = 'red';
-
+function startSpin() {
+  document.getElementById('spin-button-overlay').style.webkitAnimationPlayState = 'running';
 }
 
 
 
-document.getElementById('rotate-button').addEventListener('mouseover', animateRotateButton, false);
-document.getElementById('back').addEventListener('mouseover', gradiantSpin, false);
+var elOptions = document.getElementsByClassName('story-option');
+for (var i = 0; i < elOptions.length; i++) {
+  elOptions[i].addEventListener('mouseover', displayFish, false);
+}
+
+document.getElementById('spin-button-overlay').style.webkitAnimationPlayState = 'paused';
+document.getElementById('back').addEventListener('mouseover', startSpin, false);

@@ -4,34 +4,48 @@
   display: inline-block;
 }
 
-.navigate-story {
-  display: inline-block;
-}
-
 .pirate-main-content {
-  background: url(../images/tiger.jpg) center no-repeat;
+  background: url(../images/tiger.jpg) no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position: 30%;
 }
 
+#title {
+  color: white;
+  padding: 20px 20px 0 20px;
+  font-family: 'Cabin Sketch', cursive;
+}
+
 .headerText {
+  margin-top: 80px;
   text-align: center;
   padding-bottom: 45px;
-  color: white;
-  font-size: 5em;
+  color: #890a3b;
+  font-size: 5.5em;
+  font-family: 'Trade Winds', cursive;
 }
 
 .navigate-story {
-  margin-left: 48%;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  margin-top: 150px;
+  margin-left: 10%;
+  padding-bottom: 10px;
+}
+
+#spin-button {
+  margin-left: 4%;
+  margin-top: 10px;
+  display: inline-block;
+  position: absolute;
 }
 
 .quarter {
   width: 50px;
   height: 50px;
-  background-color: #43ffb2;
+  background-color: #db1d5d;
+  opacity: 0;
 }
 
 .top-left {
@@ -60,61 +74,136 @@
 }
 
 .storyText {
+  padding: 0 20px 0 20px;
+  line-height: 1.1em;
   font-size: 1.5em;
-  line-height: 1em;
-  font-weight: bold;
-  color: #333333;
+  color: #2d2d2d;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .storyBackground {
-  margin: 50px 0 50px 0;
-  padding: 30px 30px 30px 30px;
-  background-color: rgba(61, 198, 23, 0.5);
+  height: auto;
+  margin: 60px auto 0 auto;
+  background-color: rgba(61, 198, 23, 0.5); 
 }
 
 .story-option {
   border-style: none;
-  width: 30%;
+  width: 35%;
   height: 60px;
-  margin: 40px 0px 0px 13%;
   font-size: 1.5em;
-  color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .pirate#a {
-  background-color: #e21051;
+  color: white;
+  background-color: #2236f2;
+}
 
+.pirate#a:hover {
+  background: transparent;
+  background-color: rgba(34, 54, 242, 0.8);
 }
 
 .pirate#b {
-  background-color: yellow;
+  color: #333333;
+  margin-left: 4%;
+  background-color: #eff421;
+}
+
+.pirate#b:hover {
+  background: transparent;
+  background-color: rgba(239, 244, 33, 0.8);
 }
 
 .add-content {
-  margin: 100px 0px 0px 20%;
+  margin: 60px auto 60px auto;
+  background-color: rgba(239, 244, 33, 0.5);
+  position: absolute;
+}
+
+#form-box {
+  display: none;
 }
 
 .add-content input {
+  margin-left: auto;
+  margin-right: auto;
   border: none;
+  width: 90%;
+  height: 40px;
+  padding-left: 40px;
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #title-form {
-  width: 80%;
-  height: 30px;
-  margin-bottom: 0px;
+  margin-top: 20px;
 }
 
 #content-form {
-  width: 80%;
-  height: 200px;
+  height: 300px;
+}
+
+.add-content p {
+  margin-top: -50px;
+  font-size: 1.7em;
+  margin-left: 60%;
+}
+
+#is-ending {
+  margin-top: -100px;
+  margin-left: 50%;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  font-family: inherit;
 }
 
 .publish-content {
-  width: 25%;
-  height: 45px;
-  margin-left: 28%;
-  border: none;
-  background-color: red;
+  margin-left: 20px;
+  width: 40%;
+  background-color: #2236f2;
   color: white;
   font-size: 1.5em;
 }
+
+footer {
+  height: 20px;
+  position: fixed;
+  bottom: 0;
+}
+
+/* Spinning Radiant Circle 
+ * from http://davidwalsh.name/css-circles
+ */ 
+
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(360deg); }
+  to { -webkit-transform: rotate(0deg); }
+}
+
+#spin-button-overlay {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-left: 4%;
+  margin-top: 10px;
+  display: inline-block;
+  z-index: -100;
+
+
+  background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #ff5aa5 0%, #ef1111 100%);
+  background-image: -webkit-radial-gradient(45px 45px, circle cover, #ff5aa5, #ef1111);
+  background-image: radial-gradient(45px 45px 45deg, circle cover, #ff5aa5 0%, #ef1111 100%);
+  
+  -webkit-animation-name: spin; 
+  -webkit-animation-duration: 3s; 
+  -webkit-animation-iteration-count: 1; 
+  -webkit-animation-timing-function: linear;
+}
+
+
+
