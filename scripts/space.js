@@ -1,4 +1,4 @@
-/*
+
  Change animation to begin when user has won/reached the end
 function displayFish() {
   var elBackground = document.getElementById('background');
@@ -23,4 +23,3 @@ for (var i = 0; i < elOptions.length; i++) {
 
 document.getElementById('spin-button-overlay').style.webkitAnimationPlayState = 'paused';
 document.getElementById('back').addEventListener('mouseover', startSpin, false);
-*/

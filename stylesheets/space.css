@@ -23,8 +23,9 @@
 
 #author {
   font-size: 2em;
-  font-family: 'Cookie', cursive;
+  font-family: 'Roboto Condensed', cursive;
   font-weight: bold;
+  color: #33D6FF;
 
 }
 
@@ -87,15 +88,17 @@
   margin-left: 20px;
   line-height: 1.1em;
   font-size: 1.5em;
-  color: #2d2d2d;
+  color: #FFFFFF;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 .storyBackground {
   height: 450px;
   margin: 20px auto 50px auto;
-  background-color: rgba(61, 198, 23, 0.5);
+  background-color: #3D001F;
+  opacity: .8;
   padding-bottom: 10px; 
+  border-radius: 8px;
 }
 
 .storyBackground h2, .storyBackground h3 {
@@ -111,30 +114,31 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.pirate#a {
+.space#a {
   color: white;
   background-color: #2236f2;
 }
 
-.pirate#a:hover, .publish-content:hover {
+.space#a:hover, .publish-content:hover {
   background: transparent;
   background-color: rgba(34, 54, 242, 0.8);
   color: white;
 }
 
-.pirate#b {
+.space#b {
   color: #333333;
   margin-left: 4%;
   background-color: #eff421;
 }
 
-.pirate#b:hover {
+.space#b:hover {
   background: transparent;
   background-color: rgba(239, 244, 33, 0.8);
 }
 
 #form-box {
   height: 450px;
+  display: none;
 }
 
 #form-box input, #content-form {
