@@ -16,9 +16,11 @@ var contentForm = $('#content-form');
 var isEnding = $('#is-ending');
 var authorForm = $('#author-form');
 var submit = $('#submit');
-var currentAddress = '';
+var currentAddress = 'x';
 
-var nodes={};
+var nodes={}
+var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/pirates')
+
 write = function(address, title, content, ending, author){
   nodes[address] = {
     'address' : address,
@@ -26,16 +28,10 @@ write = function(address, title, content, ending, author){
     'content' : content,
     'ending' : ending,
     'author' : author
-  }
-  store()
-}
-
-function store(){
-  localStorage.setItem('nodes', JSON.stringify(nodes))
-}
-
-function retrieve(){
-  nodes = JSON.parse(localStorage.getItem('nodes'))
+  };
+  var item = {};
+  item[address] = nodes[address];
+  cloudData.update(item);
 }
 
 read = function(address){
@@ -53,21 +49,12 @@ traverse = function(choice){
     displayForm();
   }
 }
-//currently unused
-find = function(title){
-  for(var x in nodes){
-    if (nodes[x].title==title){
-      return nodes[x];
-    }
-    else{
-      alert('no such node');
-    }
-  }
-}
 
 display = function(){
   var node = nodes[currentAddress];
+  console.log(currentAddress)
   formBox.css('display','none');
+  errorBox.css('display', 'none')
   authorBox.css('display', 'block');
   titleBox.html(node.title);
   contentBox.html(node.content);
@@ -116,6 +103,7 @@ submitForm = function(){
 
 displayForm = function(){
     formBox.css('display', 'block');
+    is-ending.css('display', 'inline')
     titleBox.html('There\'s nothing here yet!');
     contentBox.html('Write the next part of the story');
     buttonA.css('display', 'none');
@@ -138,21 +126,19 @@ function clearForm(){
   authorForm[0].value='';
   isEnding[0].checked=false;
 }
-// initial writing of nodes
-if (localStorage.getItem('nodes')==null){
-  write('', 'Root', 'This is the Root', false, 'aksdjfkljsdh');
-  write('a', 'Choice A', 'This is choice A', false, '');
-  write('b', 'Choice B', 'This is choice B', false, '');
-  write('aa', 'Choice AA', 'This is choice AA', false, '');
-  write('ab', 'Choice AB', 'This is choice AB', true, '');
-  write('ba', 'Choice BA', 'This is choice BA', true, '');
-  write('bb', 'Choice BB', 'This is choice BB', true, '');
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
 }
-else{
-  retrieve()
+if(getUrlVars()['node']){
+  currentAddress = getUrlVars()['node']
 }
-//displays the node at address ''
-display()
+
+//displays the node at address '' or specified in url
 //event handling
 buttonA.click(function(){traverse('a')})
 buttonB.click(function(){traverse('b')})
@@ -161,3 +147,13 @@ reset.click(function(){read('')})
 submit.click(function(){submitForm()})
 // submit.click(function(){display()})
 // submit.click(function(){clearForm()})
+var initialized = false
+cloudData.on('value', function (snapshot) {
+  nodes = (snapshot.val())
+  if (!initialized){
+    display();
+    initialized = true
+  }
+})
+
+
