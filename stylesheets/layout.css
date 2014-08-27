@@ -42,12 +42,11 @@ height: 175px;
 }
 
 #thirdStory {
-background: url('../images/flamingo2.jpg') no-repeat;
+background: url('../images/flamingodark.jpg') no-repeat;
 background-position: 50% 20%;
 background-size: 1000px 400px;
 background-color: #ce19ac;
-}
-
+  }
 }
 
 /* All Mobile Sizes (devices and browser) */
@@ -70,7 +69,7 @@ margin-bottom: 20px;
 }
 
 #thirdStory {
-background: url('../images/flamingo2.jpg') no-repeat;
+background: url('../images/flamingodark.jpg') no-repeat;
 background-position: 50% 20%;
 background-size: 350px 400px;
 background-color: #ce19ac;
@@ -87,8 +86,37 @@ font-size: 2em;
 .headerText {
 font-size: 2.5em;
 }
-
 }
+
+/*For menu list items*/
+@media only screen and (min-width: 660px){
+#subnav{
+  height: 0px;
+}
+
+#subnav.active {
+  height: 50px;
+}
+}
+
+@media only screen and (min-width: 334px) and (max-width: 660px) {
+#subnav{
+  height: 0px;
+}
+#subnav.active {
+  height: 150px;
+}
+}
+
+@media only screen and (max-width: 334px) {
+  #subnav{
+  height: 0px;
+}
+#subnav.active {
+  height: 250px;
+}
+}
+/*////////////////////*/
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 560px) {
@@ -164,11 +192,10 @@ color: #dd1a0b;
 #secondStory{
 background: url('../images/space2.jpg') no-repeat;
 background-size: 100%;
-padding: 2px 0 2px 0;
 }
 
 #thirdStory{
-background: url('../images/flamingo2.jpg') no-repeat;
+background: url('../images/flamingodark.jpg') no-repeat;
 background-position: 50% 5%;
 background-size: 200px;
 background-color: #ce19ac;

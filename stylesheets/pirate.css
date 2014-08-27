@@ -15,8 +15,17 @@
 
 #title {
   color: white;
-  padding: 20px 20px 0 20px;
-  font-family: 'Cabin Sketch', cursive;
+  padding: 20px 20px 0 0;
+  font-size: 4em;
+  font-family: 'Trade Winds', cursive;
+  
+}
+
+#author {
+  font-size: 2em;
+  font-family: 'Cookie', cursive;
+  font-weight: bold;
+
 }
 
 .headerText {
@@ -74,7 +83,8 @@
 }
 
 .storyText {
-  padding: 0 20px 0 20px;
+  margin-top: 30px;
+  margin-left: 20px;
   line-height: 1.1em;
   font-size: 1.5em;
   color: #2d2d2d;
@@ -82,14 +92,20 @@
 }
 
 .storyBackground {
-  height: auto;
-  margin: 60px auto 0 auto;
-  background-color: rgba(61, 198, 23, 0.5); 
+  height: 450px;
+  margin: 20px auto 50px auto;
+  background-color: rgba(61, 198, 23, 0.5);
+  padding-bottom: 10px; 
+}
+
+.storyBackground h2, .storyBackground h3 {
+  margin-left: 20px;
 }
 
 .story-option {
   border-style: none;
   width: 35%;
+  margin-bottom: 20px;
   height: 60px;
   font-size: 1.2em;
   font-family: 'Open Sans', sans-serif;
@@ -100,9 +116,10 @@
   background-color: #2236f2;
 }
 
-.pirate#a:hover {
+.pirate#a:hover, .publish-content:hover {
   background: transparent;
   background-color: rgba(34, 54, 242, 0.8);
+  color: white;
 }
 
 .pirate#b {
@@ -116,40 +133,31 @@
   background-color: rgba(239, 244, 33, 0.8);
 }
 
-.add-content {
-  margin: 60px auto 60px auto;
-  background-color: rgba(239, 244, 33, 0.5);
-  position: absolute;
+#form-box {
+  height: 450px;
 }
 
-.add-content input {
-  margin-left: auto;
-  margin-right: auto;
+#form-box input, #content-form {
+  margin: 0px auto 5px auto;
   border: none;
   width: 90%;
-  height: 40px;
+  height: 30px;
   padding-left: 40px;
   font-size: 1.5em;
-  font-family: 'Open Sans', sans-serif;
-}
-
-#title-form {
-  margin-top: 20px;
+  font-family: 'Cookie', cursive;
+  
 }
 
 #content-form {
-  height: 200px;
+  height: 100px;
+  margin-bottom: 20px;
 }
 
-.add-content p {
-  margin-top: -50px;
-  font-size: 1.7em;
-  margin-left: 60%;
-}
-
-#is-ending {
-  margin-top: -100px;
-  margin-left: 50%;
+.is-ending-content {
+  margin-top: 10px;
+  font-size: 1.8em;
+  float: right;
+  margin-right: 20px;
 }
 
 button {
@@ -160,11 +168,14 @@ button {
 
 .publish-content {
   margin-left: 20px;
-  width: 40%;
+  width: 30%;
   background-color: #2236f2;
   color: white;
   font-size: 1.5em;
+  float: left;
 }
+
+
 
 footer {
   height: 20px;
