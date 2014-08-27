@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Fantastical Adventures</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/base.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/space.css">
+    <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class='space-main-content'>
+    <div class='container'>
+
+      <nav>
+        <div class="toggleNav">
+          <div class="toggleNavButton"></div>
+        </div>
+
+        <div id="subnav">
+          <ul>
+            <li> <a href="#">Menu Item</a> </li>
+            <li> <a href="#">Menu Item</a> </li>
+            <li> <a href="#">Menu Item</a> </li>
+            <li> <a href="#">Menu Item</a> </li>
+          </ul>
+        </div>
+      </nav>
+
+      <header>
+        <h1 class='headerText'>Galaxies Unknown</h1>
+      </header>
+
+      <section class='sixteen columns storyBackground' id='background'>
+
+        <h2 id='title'></h2>
+        <h2 id='author'></h2>
+        <p class='storyText' id='content'>
+          In the event of moon disaster speech, william safire. irrigation, unscientifically conducted, would not give us such truly wonderful mathematical fitness [as we observe in the martian canals]... it is surrounded by a light blue aureole that gradually darkens, becoming turquiose, dark blue, violet, and finally coal black. it is the speed alone that sustains him. our spiritual need for an open frontier. our sun is one of 100 billion stars in our galaxy. people will soon get to experience the moon in ways they never imagined. telescopes are in some ways like time machines. the first day or so we all pointed to our countries. the single overarching goal of human space flight is the human settlement of the solar system, and eventually beyond. there are innumerable worlds of different sizes. there was no grand musical accompaniment; no triumphant, inspired sonata or symphony. there's the whole myth about rocket science. we are here for the beauty. we fooled ourselves into thinking this thing wouldn't crash. why, i ask myself, shouldn't the shining dots of the sky be as accessible as the black dots on the map of france?.
+        </p>
+        <h2 id='end-text'></h2>
+        <div id='form-box'>
+          <input type='text' id='title-form' placeholder='Title...'/>
+          <input type='text' id='author-form' placeholder="Author's name"/>
+          <textarea id='content-form' placeholder='Content...'></textarea>
+          <button class="publish-content" id='submit'>Publish</button>
+          <p>Is this the end of the story?</p>
+          <input type='checkbox' id='is-ending'/>
+          <ul id='error-box'></ul>
+        </div>
+
+        <nav class='navigate-story'>
+          <button class='story-option pirate' id='a'></button>
+
+          <div id='spin-button'>
+            <button class='quarter top-left' id='reset'></button>
+            <button class='quarter top-right' id='back'></button>
+            <div class='quarter bottom-left' id='bottom-left'></div>
+            <div class='quarter bottom-right' id='bottom-right'></div>
+          </div>
+          <div id='spin-button-overlay'></div>
+
+          <button class='story-option pirate' id='b'></button>
+        </nav>
+      </section>
+
+      <footer class="sixteen columns">
+        <p>footer text</p>
+      </footer>
+
+    </div><!--end wrapper-->
+    <script type="text/javascript" src="storyTree/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="storyTree/tree.js"></script>
+  </body>
+</html>
