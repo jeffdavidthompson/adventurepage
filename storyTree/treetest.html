@@ -4,7 +4,9 @@
   </head>
   <body>
     <h1 id='title'></h1>
+    <h2 id='author'></h2>
     <p id='content'></p>
+    <h3 id='end-text'></h3>
     <button id='a'></button>
     <button id='b'></button>
     <br />
@@ -12,12 +14,14 @@
     <button id='reset'>Return to start</button>
     <div id='form-box'>
       <input type='text' id='title-form' placeholder='Title'/><br/>
+      <input type='text' id='author-form' placeholder="Author's name" /><br />
       <input type='text' id='content-form' placeholder='Content'/>
       <p>Is this the end of the story?
         <input type='checkbox' id='is-ending' />
       </p>
       <button id='submit'>Submit</button>
     </div>
+    <ul id='error-box'></ul>
     <script type="text/javascript" src='jquery-1.11.1.min.js'></script>
     <script type="text/javascript" src='tree.js'></script>
   </body>
