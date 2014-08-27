@@ -18,8 +18,8 @@ var authorForm = $('#author-form');
 var submit = $('#submit');
 var currentAddress = 'x';
 
-var nodes={}
-var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/pirates')
+var nodes={};
+var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/pirates');
 
 write = function(address, title, content, ending, author){
   nodes[address] = {
@@ -52,9 +52,9 @@ traverse = function(choice){
 
 display = function(){
   var node = nodes[currentAddress];
-  console.log(currentAddress)
+  console.log(currentAddress);
   formBox.css('display','none');
-  errorBox.css('display', 'none')
+  errorBox.css('display', 'none');
   authorBox.css('display', 'block');
   titleBox.html(node.title);
   contentBox.html(node.content);
@@ -84,26 +84,26 @@ display = function(){
 }
 
 submitForm = function(){
-  errorString = ''
+  errorString = '';
   if (!titleForm.val()){
-    errorString += '<li>You must input a title</li>'
+    errorString += '<li>You must input a title</li>';
   }
   if (contentForm.val().length<=20){
-    errorString += '<li>Your content field must contain at least 20 characters</li>'
+    errorString += '<li>Your content field must contain at least 20 characters</li>';
   }
   if (errorString){
-    errorBox.html(errorString)
+    errorBox.html(errorString);
   }
   else{
-    write(currentAddress, titleForm.val(), contentForm.val(), isEnding[0].checked, authorForm[0].value||'Anonymous')
-    display()
-    clearForm()
+    write(currentAddress, titleForm.val(), contentForm.val(), isEnding[0].checked, authorForm[0].value||'Anonymous');
+    display();
+    clearForm();
   }
 }
 
 displayForm = function(){
     formBox.css('display', 'block');
-    is-ending.css('display', 'inline')
+    isEnding.css('display', 'inline');
     titleBox.html('There\'s nothing here yet!');
     contentBox.html('Write the next part of the story');
     buttonA.css('display', 'none');
@@ -135,25 +135,29 @@ function getUrlVars() {
     return vars;
 }
 if(getUrlVars()['node']){
-  currentAddress = getUrlVars()['node']
+  currentAddress = getUrlVars()['node'];
 }
 
 //displays the node at address '' or specified in url
 //event handling
-buttonA.click(function(){traverse('a')})
-buttonB.click(function(){traverse('b')})
-previous.click(function(){read(currentAddress.slice(0, -1))})
-reset.click(function(){read('')})
-submit.click(function(){submitForm()})
+buttonA.click(function(){traverse('a')});
+buttonB.click(function(){traverse('b')});
+previous.click(function(){
+  if (currentAddress.length>1){
+    read(currentAddress.slice(0, -1));
+  }
+  else{}})
+reset.click(function(){read('x')});
+submit.click(function(){submitForm()});
 // submit.click(function(){display()})
 // submit.click(function(){clearForm()})
-var initialized = false
+var initialized = false;
 cloudData.on('value', function (snapshot) {
-  nodes = (snapshot.val())
+  nodes = (snapshot.val());
   if (!initialized){
     display();
-    initialized = true
+    initialized = true;
   }
-})
+});
 
 
