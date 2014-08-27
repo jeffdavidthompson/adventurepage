@@ -67,20 +67,20 @@ find = function(title){
 
 display = function(){
   var node = nodes[currentAddress];
-  formBox.css('visibility','hidden');
-  authorBox.css('visibility', 'visible');
+  formBox.css('display','none');
+  authorBox.css('display', 'block');
   titleBox.html(node.title);
   contentBox.html(node.content);
   authorBox.html(node.author);
   if(node.ending){
-    buttonA.css('visibility', 'hidden');
-    buttonB.css('visibility', 'hidden');
+    buttonA.css('display', 'none');
+    buttonB.css('display', 'none');
     endText.html('THE END');
   }
   else{
     endText.html('');
-    buttonA.css('visibility', 'visible');
-    buttonB.css('visibility', 'visible');
+    buttonA.css('display', 'inline');
+    buttonB.css('display', 'inline');
     if (nodes.hasOwnProperty(currentAddress+'a')){
       buttonA.html(nodes[currentAddress+'a'].title);
     }
@@ -108,19 +108,19 @@ submitForm = function(){
     errorBox.html(errorString)
   }
   else{
-    write(currentAddress, titleForm.val(), contentForm.val(), isEnding[0].checked, authorForm[0].value)
+    write(currentAddress, titleForm.val(), contentForm.val(), isEnding[0].checked, authorForm[0].value||'Anonymous')
     display()
     clearForm()
   }
 }
 
 displayForm = function(){
-    formBox.css('visibility', 'visible');
+    formBox.css('display', 'block');
     titleBox.html('There\'s nothing here yet!');
     contentBox.html('Write the next part of the story');
-    buttonA.css('visibility', 'hidden');
-    buttonB.css('visibility', 'hidden');
-    authorBox.css('visibility', 'hidden');
+    buttonA.css('display', 'none');
+    buttonB.css('display', 'none');
+    authorBox.css('display', 'none');
   }
 //currently not used
 function Node(address, title, content, ending, author){
