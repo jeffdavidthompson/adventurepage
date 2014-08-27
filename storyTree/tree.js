@@ -17,9 +17,26 @@ var isEnding = $('#is-ending');
 var authorForm = $('#author-form');
 var submit = $('#submit');
 var currentAddress = 'x';
-
+var story
 var nodes={};
-var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/pirates');
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+if(getUrlVars()['node']){
+  currentAddress = getUrlVars()['node'];
+}
+if(getUrlVars()['story']){
+  story = getUrlVars()['story'];
+}
+else{
+  $('body').html('<center><h1 style="margin-top: 50px">404 - Page not found</h1></center>')
+}
+
+var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/'+story);
 
 write = function(address, title, content, ending, author){
   nodes[address] = {
@@ -125,17 +142,6 @@ function clearForm(){
   contentForm[0].value='';
   authorForm[0].value='';
   isEnding[0].checked=false;
-}
-
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
-}
-if(getUrlVars()['node']){
-  currentAddress = getUrlVars()['node'];
 }
 
 //displays the node at address '' or specified in url
