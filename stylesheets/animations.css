@@ -87,6 +87,7 @@ nav {
 #subnav ul {
 /*  width: 615px;*/
   margin: 0 auto;
+  text-align: center;
 }
 #subnav ul li {
   transition-duration: 0.3s;
