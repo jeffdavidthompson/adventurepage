@@ -1,7 +1,7 @@
 /* About Page Layout */
 
 .po {
-  background: #00C2F2 url(../images/po.jpg) no-repeat fixed 0 0; 
+  background: #00C2F2 url(../images/po.jpg) no-repeat fixed 0 0;
   overflow:auto;
 }
 
@@ -15,7 +15,6 @@
   padding: 20px 20px 0 0;
   font-size: 4em;
   font-family: 'Cuprum', cursive;
-  
 }
 
 #author {
@@ -23,7 +22,6 @@
   font-family: 'Roboto Condensed', cursive;
   font-weight: bold;
   color: #33D6FF;
-
 }
 
 .headerText {
