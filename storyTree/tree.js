@@ -10,6 +10,8 @@ var buttonA = $('#a');
 var buttonB = $('#b');
 var previous = $('#back');
 var reset = $('#reset');
+var spinButton = $('#spin-button');
+var spinButtonOverlay = $('#spin-button-overlay');
 //form fields
 var titleForm = $('#title-form');
 var contentForm = $('#content-form');
@@ -132,6 +134,8 @@ displayForm = function(){
     buttonA.css('display', 'none');
     buttonB.css('display', 'none');
     authorBox.css('display', 'none');
+    spinButton.css({'margin-top': '-658px', 'float': 'right', 'margin-right': '15px'});
+    spinButtonOverlay.css({'margin-top': '-658px', 'float': 'right', 'margin-right': '15px'});
   }
 //currently not used
 function Node(address, title, content, ending, author){
