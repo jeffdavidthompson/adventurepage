@@ -7,26 +7,29 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/layout.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/adventure.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/menu.css">
     <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
   </head>
 
   <body class='pirate-main-content'>
     <div class='container'>
 
-      <nav>
-        <div class="toggleNav">
-          <div class="toggleNavButton"></div>
-        </div>
+    <nav class='topmenu'>
 
+      <div class="toggleNav">
+        <div class="toggleNavButton">
+        </div>
+      </div>
         <div id="subnav">
           <ul>
-            <li> <a href="#">Menu Item</a> </li>
-            <li> <a href="#">Menu Item</a> </li>
-            <li> <a href="#">Menu Item</a> </li>
-            <li> <a href="#">Menu Item</a> </li>
+            <a href="index.html"><li><span class='menuButtonText'>Home</span></li></a>
+            <a href="about.html"><li><span class='menuButtonText'>About</span></li></a>
+            <a href="create.html"><li><span class='menuButtonText'>Create</span></li></a>
+            <a href="profile.html"><li><span class='menuButtonText'>Profile</span></li></a>
           </ul>
         </div>
-      </nav>
+
+    </nav>
 
       <header>
         <h1 class='headerText'></h1>
@@ -50,7 +53,7 @@
           <ul id='error-box'></ul>
         </div>
 
-        <nav class='navigate-story'>
+        <div class='navigate-story'>
           <button class='story-option pirate' id='a'></button>
 
           <div id='spin-button'>
@@ -62,16 +65,13 @@
           <div id='spin-button-overlay'></div>
 
           <button class='story-option pirate' id='b'></button>
-        </nav>
+        </div>
       </section>
-
-      <footer class="sixteen columns">
-        <p>footer text</p>
-      </footer>
 
     </div><!--end wrapper-->
     <script type="text/javascript" src="storyTree/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="storyTree/tree.js"></script>
     <script type="text/javascript" src="scripts/pirate.js"></script>
+    <script type="text/javascript" src="scripts/nav.js"></script>
   </body>
 </html>

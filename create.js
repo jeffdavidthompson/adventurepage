@@ -13,7 +13,7 @@ createItem = function(){
     'title' : titleForm.val(),
     'content' : contentForm.val(),
     'ending' : false,
-    'author' : authorForm.val()
+    'author' : authorForm.val() || 'Anonymous'
   }
   var item2 = {};
   var item3 = {};
