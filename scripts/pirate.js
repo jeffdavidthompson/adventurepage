@@ -1,25 +1,25 @@
+var elPopupBack = document.getElementById('popup-back');
+var elPopupReset = document.getElementById('popup-reset');
 
-// /* Change animation to begin when user has won/reached the end
-// function displayFish() {
-//   var elBackground = document.getElementById('background');
-//   elBackground.style.background = 'url(images/fish1.gif) center repeat-x';
-//   elBackground.style.backgroundSize = '25%';
-//   elBackground.style.backgroundColor = 'rgba(61, 198, 23, 0.5)';
-//   document.getElementById('content').style.visibility = 'hidden';
-//   document.getElementById('title').style.visibility = 'hidden';
-// }
-// */
+function displayBackText() {
+  elPopupBack.style.display = 'block';
+}
 
-// function startSpin() {
-//   document.getElementById('spin-button-overlay').style.webkitAnimationPlayState = 'running';
-// }
+function displayResetText() {
+  elPopupReset.style.display = 'block';
+}
 
+function hideBackText() {
+  elPopupBack.style.display = 'none';
+}
 
+function hideResetText() {
+  elPopupReset.style.display = 'none';
+}
 
-// var elOptions = document.getElementsByClassName('story-option');
-// for (var i = 0; i < elOptions.length; i++) {
-//   elOptions[i].addEventListener('mouseover', displayFish, false);
-// }
+// event listeners
+document.getElementById('back').addEventListener('mouseover', displayBackText, false);
+document.getElementById('back').addEventListener('mouseout', hideBackText, false);
+document.getElementById('reset').addEventListener('mouseover', displayResetText, false);
+document.getElementById('reset').addEventListener('mouseout', hideResetText, false);
 
-// document.getElementById('spin-button-overlay').style.webkitAnimationPlayState = 'paused';
-// document.getElementById('back').addEventListener('mouseover', startSpin, false);
