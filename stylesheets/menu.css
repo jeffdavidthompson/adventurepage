@@ -29,7 +29,8 @@
 .toggleNav:hover {
   border-bottom: 5px solid #13ca9d;
 }
-nav {
+
+.topMenu {
   width: 100%;
   min-height: 50px;
 }
