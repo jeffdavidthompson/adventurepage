@@ -4,8 +4,23 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/base.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/create.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/menu.css">
 </head>
 <body>
+  <nav class='topmenu'>
+    <div class="toggleNav">
+      <div class="toggleNavButton">
+      </div>
+    </div>
+      <div id="subnav">
+        <ul>
+          <a href="index.html"><li><span class='menuButtonText'>Home</span></li></a>
+          <a href="about.html"><li><span class='menuButtonText'>About</span></li></a>
+          <a href="create.html"><li><span class='menuButtonText'>Create</span></li></a>
+          <a href="profile.html"><li><span class='menuButtonText'>Profile</span></li></a>
+        </ul>
+      </div>
+  </nav>
   <h1>Create a new adventure</h1>
     <div class="container">
       <p>Choose a title: <input class="sixteen columns" type='text' id='title-form' placeholder='Title'/><br/></p>
@@ -21,6 +36,7 @@
       </div>
     </div>
   <script type="text/javascript" src="storyTree/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="scripts/nav.js"></script>
   <script type="text/javascript" src="create.js"></script>
 </body>
 </html>
