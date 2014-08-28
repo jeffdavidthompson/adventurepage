@@ -137,3 +137,32 @@ nav {
     background-size: 200px;
     background-color: #ce19ac;
 }
+/*For menu list items*/
+@media only screen and (min-width: 660px){
+#subnav{
+  height: 0px;
+}
+
+#subnav.active {
+  height: 50px;
+}
+}
+
+@media only screen and (min-width: 334px) and (max-width: 660px) {
+#subnav{
+  height: 0px;
+}
+#subnav.active {
+  height: 150px;
+}
+}
+
+@media only screen and (max-width: 334px) {
+  #subnav{
+  height: 0px;
+}
+#subnav.active {
+  height: 250px;
+}
+}
+/*////////////////////*/

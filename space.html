@@ -6,28 +6,37 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/base.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/space.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/animations.css">
     <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
   </head>
 
   <body class='space-main-content'>
+
+
+   <!-- here -->
+
+<nav>
+
+  <div class="toggleNav">
+    <div class="toggleNavButton">
+    </div>
+  </div>
+    <div id="subnav">
+      <ul>
+        <li> <a href="#">Menu Item</a> </li>
+        <li> <a href="#">Menu Item</a> </li>
+        <li> <a href="#">Menu Item</a> </li>
+        <li> <a href="#">Menu Item</a> </li>
+      </ul>
+    </div>
+
+</nav>
+
+  <!-- here --> 
+
     <div class='container'>
-
-      <nav>
-        <div class="toggleNav">
-          <div class="toggleNavButton"></div>
-        </div>
-
-        <div id="subnav">
-          <ul>
-            <li> <a href="#">Menu Item</a> </li>
-            <li> <a href="#">Menu Item</a> </li>
-            <li> <a href="#">Menu Item</a> </li>
-            <li> <a href="#">Menu Item</a> </li>
-          </ul>
-        </div>
-      </nav>
 
       <header>
         <h1 class='headerText'>Galaxies Unknown</h1>
@@ -66,12 +75,9 @@
         </nav>
       </section>
 
-      <footer class="sixteen columns">
-        <p>footer text</p>
-      </footer>
-
-    </div><!--end wrapper-->
+    </div>
     <script type="text/javascript" src="storyTree/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="storyTree/tree.js"></script>
+    <script type="text/javascript" src="scripts/nav.js"></script>
   </body>
 </html>

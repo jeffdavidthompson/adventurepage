@@ -179,8 +179,6 @@ button {
   float: left;
 }
 
-
-
 footer {
   height: 20px;
   position: fixed;
@@ -214,6 +212,5 @@ footer {
   -webkit-animation-iteration-count: 1; 
   -webkit-animation-timing-function: linear;
 }
-
 
 
