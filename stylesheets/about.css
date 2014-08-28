@@ -1,0 +1,91 @@
+/* Space Page Layout */
+
+#subnav ul li {
+  display: inline-block;
+}
+
+.about-main-content {
+  background: url(../images/po.jpg) no-repeat fixed;
+  background-color: #00C2F2;
+  background-size: 135%;
+}
+
+#title {
+  color: white;
+  padding: 20px 20px 0 0;
+  font-size: 4em;
+  font-family: 'Cuprum', cursive;
+}
+
+.aboutText {
+  margin-top: 30px;
+  margin-left: 20px;
+  line-height: 1.1em;
+  font-size: 1.5em;
+  color: #FFFFFF;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.headerText {
+  margin-top: 80px;
+  text-align: center;
+  padding-bottom: 45px;
+  color: #890a3b;
+  font-size: 5.5em;
+  font-family: 'Cuprum', cursive;
+}
+
+.storyBackground {
+  height: 450px;
+  margin: 20px auto 50px auto;
+  background-color: #3D001F;
+  opacity: .8;
+  padding-bottom: 10px; 
+  border-radius: 8px;
+}
+
+.storyBackground h2, .storyBackground h3 {
+  margin-left: 20px;
+}
+
+.space#a {
+  color: white;
+  background-color: #2236f2;
+}
+
+.space#a:hover, .publish-content:hover {
+  background: transparent;
+  background-color: rgba(34, 54, 242, 0.8);
+  color: white;
+}
+
+.space#b {
+  color: #333333;
+  margin-left: 4%;
+  background-color: #eff421;
+}
+
+.space#b:hover {
+  background: transparent;
+  background-color: rgba(239, 244, 33, 0.8);
+}
+
+button {
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+}
+
+html, body{
+    height:100%;
+    min-height:100%;
+    margin:0;
+    padding:0;
+}
+.about-main-content{
+    width:100%;
+    height:100%;
+    background: #fff url(../images/po.jpg) no-repeat fixed 0 0; 
+    overflow:auto;
+}
+
