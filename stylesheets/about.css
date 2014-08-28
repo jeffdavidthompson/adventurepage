@@ -6,7 +6,7 @@
 }
 
 /*.laalaa {
-  background: #00C2F2 url(../images/laalaa.png) no-repeat fixed 0 0; 
+  background: #00C2F2 url(../images/laalaa.png) no-repeat fixed 0 0;
   overflow:auto;
 }*/
 
@@ -33,6 +33,12 @@
   font-family: 'Changa One', cursive;
 }
 
+.subheadText {
+  line-height: 1.2em;
+  font-size: 1.8em;
+  color: white
+}
+
 .aboutText {
   margin-top: 30px;
   margin-left: 20px;
@@ -47,7 +53,7 @@
   margin: 20px auto 50px auto;
   background-color: #3D001F;
   opacity: .9;
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
   border-radius: 8px;
 }
 
@@ -61,8 +67,8 @@
 }
 
 .cloud {
-  width: 560px; 
-  height: 400px; 
+  width: 560px;
+  height: 400px;
   background-image: url(../images/cloud.png);
   background-position: 0px 0px;
   background-repeat: repeat-x;
