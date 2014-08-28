@@ -1,5 +1,9 @@
 /* Pirate Page Layout */
 
+.menuButtonText {
+  color: white;
+}
+
 #subnav ul li {
   display: inline-block;
 }
@@ -29,7 +33,7 @@
 .headerText {
   margin-top: 80px;
   text-align: center;
-  padding-bottom: 45px;
+  padding-bottom: 0px;
   color: #890a3b;
   font-size: 5.5em;
   font-family: 'Trade Winds', cursive;
