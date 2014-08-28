@@ -29,8 +29,14 @@ submitForm = function(){
   if (!titleForm.val()){
     errorString += '<li>You must input a title</li>';
   }
+  if (titleForm.val().length>30){
+    errorString += '<li>Your title must be less than 30 characters</li>';
+  }
   if (contentForm.val().length<=20){
     errorString += '<li>Your content field must contain at least 20 characters</li>';
+  }
+  if (contentForm.val().length>400){
+    errorString += '<li>Your content field must contain at most 400 characters. Currently at '+contentForm.val().length+'</li>';
   }
   if (errorString){
     errorBox.html(errorString);

@@ -4,7 +4,8 @@ var contentBox = $('#content');
 var formBox = $('#form-box');
 var authorBox = $('#author');
 var endText = $('#end-text');
-var errorBox = $('#error-box')
+var errorBox = $('#error-box');
+var headerText = $('.headerText');
 //nav buttons
 var buttonA = $('#a');
 var buttonB = $('#b');
@@ -19,7 +20,8 @@ var isEnding = $('#is-ending');
 var authorForm = $('#author-form');
 var submit = $('#submit');
 var currentAddress = 'x';
-var story
+
+var story;
 var nodes={};
 function getUrlVars() {
     var vars = {};
@@ -35,7 +37,7 @@ if(getUrlVars()['story']){
   story = getUrlVars()['story'];
 }
 else{
-  $('body').html('<center><h1 style="margin-top: 50px">404 - Page not found</h1></center>')
+  $('body').html('<center><h1 style="margin-top: 50px">404 - Page not found</h1></center>');
 }
 
 var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/'+story);
@@ -108,7 +110,7 @@ submitForm = function(){
     errorString += '<li>You must input a title</li>';
   }
   if (titleForm.val().length>30){
-    errorString += '<li>Your title must be less than 30 characters</li>'
+    errorString += '<li>Your title must be less than 30 characters</li>';
   }
   if (contentForm.val().length<20){
     errorString += '<li>Your content field must contain at least 20 characters</li>';
@@ -173,5 +175,8 @@ cloudData.on('value', function (snapshot) {
   if (!initialized){
     display();
     initialized = true;
+    if(headerText.html()==''){
+      headerText.html()
+    }
   }
 });
