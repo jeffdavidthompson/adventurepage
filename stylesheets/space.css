@@ -4,10 +4,6 @@
   display: inline-block;
 }
 
-.menuButtonText {
-  color: white;
-}
-
 .space-main-content {
   background: url(../images/deepspace.jpg) no-repeat fixed;
   -webkit-background-size: cover;
