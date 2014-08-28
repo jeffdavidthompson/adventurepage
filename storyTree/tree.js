@@ -79,7 +79,7 @@ display = function(){
   authorBox.css('display', 'block');
   titleBox.html(node.title);
   contentBox.html(node.content);
-  authorBox.html(node.author);
+  authorBox.html('Written by: '+node.author);
   if(node.ending){
     buttonA.css('display', 'none');
     buttonB.css('display', 'none');
