@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/layout.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/index_animations.css">
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
 </head>
 <body>
   <header>
@@ -19,57 +20,62 @@
     </div>
 
   </header>
-
   <div class='container'>
-
     <div class='sixteen columns story' id='firstStory'>
 
-      <div class='option leftChoice pirate'>
-        <p>Walk the plank.</p>
-      </div>
+      <a href="pirate.html?story=pirate&amp;node=xa">
+        <div class='option leftChoice pirate'>
+          <p id='pirate-choice-a'></p>
+        </div>
+      </a>
+      <a href="pirate.html?story=pirate">
       <h2 class='storyTitle'>
         Booty on the High Seas
       </h2>
+      </a>
+      <a href="pirate.html?story=pirate&amp;node=xa">
       <div class='option rightChoice pirate'>
-        <p>Draw your sword.</p>
+        <p id='pirate-choice-b'></p>
       </div>
-
+    </a>
     </div>
-
     <div class='sixteen columns story' id='secondStory'>
-
+    <a href="space.html?story=space&amp;node=xa">
       <div class='option leftChoice space'>
-        <p>Realign the plasma manifolds.</p>
+        <p id='space-choice-a'></p>
       </div>
+    </a>
+    <a href="space.html?story=space">
        <h2 class='storyTitle'>Galaxies Unknown</h2>
+    </a>
+    <a href="space.html?story=space&amp;node=xb">
       <div class='option rightChoice space'>
-        <p>Jump into the space-time anomaly.</p>
+        <p id='space-choice-b'></p>
       </div>
-
+    </a>
     </div>
 
     <div class='sixteen columns story' id='thirdStory'>
-
+    <a href="storyTree/treetest.html?story=twerk&amp;node=xa">
       <div class='option leftChoice twerk'>
-        <p>
-          Bake a carrot cake for the party.
-        </p>
+        <p id='twerk-choice-a'></p>
       </div>
-
+    </a>
+    <a href="storyTree/treetest.html?story=twerk">
       <h2 class='storyTitle'>
         Tweak and Twerk
       </h2>
-      
+    </a>
+    <a href="storyTree/treetest.html?story=twerk&amp;node=xb">
       <div class='option rightChoice twerk'>
-        <p>
-          Check the dumpster needles for leftover heroin.
-        </p>
+        <p id='twerk-choice-b'></p>
       </div>
-
+    </a>
     </div>
 
   </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
