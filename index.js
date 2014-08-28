@@ -23,7 +23,7 @@ cloudData.on('value', function (snapshot) {
   for (e in data['stories']){
     console.log(e)
     console.log(data['stories'][e]['x']['title'])
-    container.append('<a href="adventure.html?story=stories/'+data["stories"][e]["x"]["title"]+'"><div class="sixteen columns story"><h2 class="storyTitle">'+data["stories"][e]["x"]["title"]+'</h2></a></div>'
+    container.append('<a href="adventure.html?story=stories/'+data["stories"][e]["x"]["title"]+'"><div class="sixteen columns story user-created"><h2 class="storyTitle">'+data["stories"][e]["x"]["title"]+'</h2></div></a>'
       )
   }
 });
