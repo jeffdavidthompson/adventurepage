@@ -4,6 +4,10 @@
   display: inline-block;
 }
 
+.menuButtonText {
+  color: white;
+}
+
 .space-main-content {
   background: url(../images/deepspace.jpg) no-repeat fixed;
   -webkit-background-size: cover;
@@ -17,7 +21,6 @@
   padding: 20px 20px 0 0;
   font-size: 4em;
   font-family: 'Cuprum', cursive;
-  
 }
 
 #author {
@@ -25,7 +28,6 @@
   font-family: 'Roboto Condensed', cursive;
   font-weight: bold;
   color: #33D6FF;
-
 }
 
 .headerText {
@@ -148,7 +150,6 @@
   padding-left: 40px;
   font-size: 1.5em;
   font-family: 'Cookie', cursive;
-  
 }
 
 #content-form {
