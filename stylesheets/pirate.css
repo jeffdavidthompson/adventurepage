@@ -18,14 +18,12 @@
   padding: 20px 20px 0 0;
   font-size: 4em;
   font-family: 'Trade Winds', cursive;
-  
 }
 
 #author {
   font-size: 2em;
   font-family: 'Cookie', cursive;
   font-weight: bold;
-
 }
 
 .headerText {
@@ -144,8 +142,7 @@
   height: 30px;
   padding-left: 40px;
   font-size: 1.5em;
-  font-family: 'Cookie', cursive;
-  
+  font-family: 'Cookie', cursive; 
 }
 
 #content-form {
@@ -154,10 +151,33 @@
 }
 
 .is-ending-content {
+  float: right;
+}
+
+.is-ending-content p {
   margin-top: 10px;
   font-size: 1.8em;
-  float: right;
   margin-right: 20px;
+  color: white;
+}
+
+input[type=checkbox] {
+  opacity: 0;
+}
+
+.is-ending-content label {
+  margin-left: 245px;
+  margin-top: -45px;
+  height: 50px;
+  width: 60px;
+  background-color: #F64870;
+  border: 2px solid grey;
+  border-radius: 3%;
+}
+
+input[type=checkbox]:checked ~ label {
+  background: url(../images/checkmark.png) center no-repeat;
+  background-size: 60px 50px;
 }
 
 button {
@@ -177,11 +197,7 @@ button {
 
 
 
-footer {
-  height: 20px;
-  position: fixed;
-  bottom: 0;
-}
+
 
 /* Spinning Radiant Circle 
  * from http://davidwalsh.name/css-circles
