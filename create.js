@@ -2,10 +2,10 @@ var titleForm = $('#title-form')
 var authorForm = $('#author-form')
 var contentForm = $('#content-form')
 var errorBox = $('#error-box')
+var errorDiv = $('.error-div')
 var submit = $('#submit')
 var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/stories');
-
-cloudData.update({'testy':'testes'})
+var data
 
 createItem = function(){
   item1 = {
@@ -24,7 +24,6 @@ createItem = function(){
 }
 
 submitForm = function(){
-  console.log('ping')
   errorString = '';
   if (!titleForm.val()){
     errorString += '<li>You must input a title</li>';
@@ -38,17 +37,20 @@ submitForm = function(){
   if (contentForm.val().length>400){
     errorString += '<li>Your content field must contain at most 400 characters. Currently at '+contentForm.val().length+'</li>';
   }
+  if (data[titleForm.val()]){
+    errorString += '<li>That title is already used by another story. Please use a different one.</li>'
+  }
   if (errorString){
     errorBox.html(errorString);
+    errorDiv.css({'display': 'block'})
   }
   else{
     createItem()
+    location.assign('adventure.html?story=stories/'+titleForm.val())
   }
 }
 submit.click(function(){submitForm()})
 
 cloudData.on('value', function (snapshot) {
-  nodes = (snapshot.val());
-  console.log(nodes);
-}
-)
+  data = (snapshot.val());
+})

@@ -176,7 +176,7 @@ cloudData.on('value', function (snapshot) {
     display();
     initialized = true;
     if(headerText.html()==''){
-      headerText.html()
+      headerText.html(story.slice(8))
     }
   }
 });
