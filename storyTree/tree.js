@@ -16,9 +16,28 @@ var contentForm = $('#content-form');
 var isEnding = $('#is-ending');
 var authorForm = $('#author-form');
 var submit = $('#submit');
-var currentAddress = '';
-
+var currentAddress = 'x';
+var story
 var nodes={};
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+if(getUrlVars()['node']){
+  currentAddress = getUrlVars()['node'];
+}
+if(getUrlVars()['story']){
+  story = getUrlVars()['story'];
+}
+else{
+  $('body').html('<center><h1 style="margin-top: 50px">404 - Page not found</h1></center>')
+}
+
+var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/'+story);
+
 write = function(address, title, content, ending, author){
   nodes[address] = {
     'address' : address,
@@ -26,16 +45,10 @@ write = function(address, title, content, ending, author){
     'content' : content,
     'ending' : ending,
     'author' : author
-  }
-  store()
-}
-
-function store(){
-  localStorage.setItem('nodes', JSON.stringify(nodes))
-}
-
-function retrieve(){
-  nodes = JSON.parse(localStorage.getItem('nodes'))
+  };
+  var item = {};
+  item[address] = nodes[address];
+  cloudData.update(item);
 }
 
 read = function(address){
@@ -53,21 +66,12 @@ traverse = function(choice){
     displayForm();
   }
 }
-//currently unused
-find = function(title){
-  for(var x in nodes){
-    if (nodes[x].title==title){
-      return nodes[x];
-    }
-    else{
-      alert('no such node');
-    }
-  }
-}
 
 display = function(){
   var node = nodes[currentAddress];
+  console.log(currentAddress);
   formBox.css('display','none');
+  errorBox.css('display', 'none');
   authorBox.css('display', 'block');
   titleBox.html(node.title);
   contentBox.html(node.content);
@@ -97,25 +101,26 @@ display = function(){
 }
 
 submitForm = function(){
-  errorString = ''
+  errorString = '';
   if (!titleForm.val()){
-    errorString += '<li>You must input a title</li>'
+    errorString += '<li>You must input a title</li>';
   }
   if (contentForm.val().length<=20){
-    errorString += '<li>Your content field must contain at least 20 characters</li>'
+    errorString += '<li>Your content field must contain at least 20 characters</li>';
   }
   if (errorString){
-    errorBox.html(errorString)
+    errorBox.html(errorString);
   }
   else{
-    write(currentAddress, titleForm.val(), contentForm.val(), isEnding[0].checked, authorForm[0].value||'Anonymous')
-    display()
-    clearForm()
+    write(currentAddress, titleForm.val(), contentForm.val(), isEnding[0].checked, authorForm[0].value||'Anonymous');
+    display();
+    clearForm();
   }
 }
 
 displayForm = function(){
     formBox.css('display', 'block');
+    isEnding.css('display', 'inline');
     titleBox.html('There\'s nothing here yet!');
     contentBox.html('Write the next part of the story');
     buttonA.css('display', 'none');
@@ -138,26 +143,25 @@ function clearForm(){
   authorForm[0].value='';
   isEnding[0].checked=false;
 }
-// initial writing of nodes
-if (localStorage.getItem('nodes')==null){
-  write('', 'Root', 'This is the Root', false, 'aksdjfkljsdh');
-  write('a', 'Choice A', 'This is choice A', false, '');
-  write('b', 'Choice B', 'This is choice B', false, '');
-  write('aa', 'Choice AA', 'This is choice AA', false, '');
-  write('ab', 'Choice AB', 'This is choice AB', true, '');
-  write('ba', 'Choice BA', 'This is choice BA', true, '');
-  write('bb', 'Choice BB', 'This is choice BB', true, '');
-}
-else{
-  retrieve()
-}
-//displays the node at address ''
-display()
+
+//displays the node at address '' or specified in url
 //event handling
-buttonA.click(function(){traverse('a')})
-buttonB.click(function(){traverse('b')})
-previous.click(function(){read(currentAddress.slice(0, -1))})
-reset.click(function(){read('')})
-submit.click(function(){submitForm()})
+buttonA.click(function(){traverse('a')});
+buttonB.click(function(){traverse('b')});
+previous.click(function(){
+  if (currentAddress.length>1){
+    read(currentAddress.slice(0, -1));
+  }
+  else{}})
+reset.click(function(){read('x')});
+submit.click(function(){submitForm()});
 // submit.click(function(){display()})
 // submit.click(function(){clearForm()})
+var initialized = false;
+cloudData.on('value', function (snapshot) {
+  nodes = (snapshot.val());
+  if (!initialized){
+    display();
+    initialized = true;
+  }
+});
