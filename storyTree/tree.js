@@ -171,5 +171,3 @@ cloudData.on('value', function (snapshot) {
     initialized = true;
   }
 });
-
-
