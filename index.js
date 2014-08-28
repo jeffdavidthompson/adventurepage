@@ -4,7 +4,7 @@ var spaceLeft = $('#secondStory .leftChoice')
 var spaceRight = $('#secondStory .rightChoice')
 var twerkLeft = $('#thirdStory .leftChoice')
 var twerkRight = $('#thirdStory .rightChoice')
-var container = $('.container')
+var container = $('#otherStories')
 var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/');
 var data = {}
 
@@ -19,7 +19,7 @@ cloudData.on('value', function (snapshot) {
   twerkLeft.html('<p>'+data['twerk']['xa'].title+'</p>')
   twerkRight.html('<p>'+data['twerk']['xb'].title+'</p>')
   console.log(data['stories'])
-
+  container.html('')
   for (e in data['stories']){
     console.log(e)
     console.log(data['stories'][e]['x']['title'])

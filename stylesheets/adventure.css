@@ -1,0 +1,231 @@
+/* Pirate Page Layout */
+
+#subnav ul li {
+  display: inline-block;
+}
+
+.pirate-main-content {
+  background-color: #19D1FF;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 30%;
+}
+
+#title {
+  color: white;
+  padding: 20px 20px 0 0;
+  font-size: 4em;
+  font-family: 'Trade Winds', cursive;
+}
+
+#author {
+  font-size: 2em;
+  font-family: 'Cookie', cursive;
+  font-weight: bold;
+}
+
+.headerText {
+  margin-top: 80px;
+  text-align: center;
+  padding-bottom: 45px;
+  color: #890a3b;
+  font-size: 5.5em;
+  font-family: 'Trade Winds', cursive;
+}
+
+.navigate-story {
+  margin-top: 150px;
+  margin-left: 10%;
+  padding-bottom: 10px;
+}
+
+#spin-button {
+  margin-left: 4%;
+  margin-top: 10px;
+  display: inline-block;
+  position: absolute;
+}
+
+.quarter {
+  width: 50px;
+  height: 50px;
+  background-color: #db1d5d;
+  opacity: 0;
+}
+
+.top-left {
+  border-radius: 50px 0 0 0;
+  position: absolute;
+  border-style: none;
+}
+
+.top-right {
+  border-radius: 0 50px 0 0;
+  margin-left: 50px;
+  border-style: none;
+}
+
+.bottom-right {
+  margin-top: -20px;
+  border-radius: 0 0 0 50px;
+  position: absolute;
+}
+
+.bottom-left {
+  margin-top: -20px;
+  border-radius: 0 0 50px 0;
+  position: absolute;
+  margin-left: 50px;
+}
+
+.storyText {
+  margin-top: 30px;
+  margin-left: 20px;
+  line-height: 1.1em;
+  font-size: 1.5em;
+  color: #2d2d2d;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.storyBackground {
+  height: 450px;
+  margin: 20px auto 50px auto;
+  background-color: rgba(61, 198, 23, 0.5);
+  padding-bottom: 10px;
+}
+
+.storyBackground h2, .storyBackground h3 {
+  margin-left: 20px;
+}
+
+.story-option {
+  border-style: none;
+  width: 35%;
+  margin-bottom: 20px;
+  height: 60px;
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.pirate#a {
+  color: white;
+  background-color: #2236f2;
+}
+
+.pirate#a:hover, .publish-content:hover {
+  background: transparent;
+  background-color: rgba(34, 54, 242, 0.8);
+  color: white;
+}
+
+.pirate#b {
+  color: #333333;
+  margin-left: 4%;
+  background-color: #eff421;
+}
+
+.pirate#b:hover {
+  background: transparent;
+  background-color: rgba(239, 244, 33, 0.8);
+}
+
+#form-box {
+  height: 450px;
+}
+
+#form-box input, #content-form {
+  margin: 0px auto 5px auto;
+  border: none;
+  width: 90%;
+  height: 30px;
+  padding-left: 40px;
+  font-size: 1.5em;
+  font-family: 'Cookie', cursive;
+}
+
+#content-form {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.is-ending-content {
+  float: right;
+}
+
+.is-ending-content p {
+  margin-top: 10px;
+  font-size: 1.8em;
+  margin-right: 20px;
+  color: white;
+}
+
+input[type=checkbox] {
+  opacity: 0;
+}
+
+.is-ending-content label {
+  margin-left: 245px;
+  margin-top: -45px;
+  height: 50px;
+  width: 60px;
+  background-color: #F64870;
+  border: 2px solid grey;
+  border-radius: 3%;
+}
+
+input[type=checkbox]:checked ~ label {
+  background: url(../images/checkmark.png) center no-repeat;
+  background-size: 60px 50px;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+}
+
+.publish-content {
+  margin-left: 20px;
+  width: 30%;
+  background-color: #2236f2;
+  color: white;
+  font-size: 1.5em;
+  float: left;
+}
+
+
+
+
+
+/* Spinning Radiant Circle
+ * from http://davidwalsh.name/css-circles
+ */
+
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(360deg); }
+  to { -webkit-transform: rotate(0deg); }
+}
+
+#spin-button-overlay {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-left: 4%;
+  margin-top: 10px;
+  display: inline-block;
+  z-index: -100;
+
+  background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #ff5aa5 0%, #ef1111 100%);
+  background-image: -webkit-radial-gradient(45px 45px, circle cover, #ff5aa5, #ef1111);
+  background-image: radial-gradient(45px 45px 45deg, circle cover, #ff5aa5 0%, #ef1111 100%);
+
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+}
+
+
+
