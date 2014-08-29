@@ -5,20 +5,22 @@
     <title>Fantastical Adventures</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/base.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/layout.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/adventure.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/menu.css">
     <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
   </head>
 
-  <body class='pirate-main-content'>
-    <div class='container'>
+  <body class='adventure-main-content'>
 
-    <nav class='topmenu'>
+    <h2 id='popup-back'>Go Back One!</h2>
+    <h2 id='popup-reset'>Go Back to Start!</h2>
+    
+    <div class='container'>
+      
+      <nav class='topmenu'>
 
       <div class="toggleNav">
-        <div class="toggleNavButton">
-        </div>
+        <div class="toggleNavButton"></div>
       </div>
         <div id="subnav">
           <ul>
@@ -29,8 +31,6 @@
           </ul>
         </div>
 
-    </nav>
-
       <header>
         <h1 class='headerText'></h1>
       </header>
@@ -39,22 +39,26 @@
 
         <h2 id='title'></h2>
         <h2 id='author'></h2>
-        <p class='storyText' id='content'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur, diam sit amet volutpat egestas, purus nisi auctor tortor, non feugiat quam enim eu tellus. In luctus pretium tortor, non faucibus sapien ullamcorper sed. Vivamus ac elit volutpat, cursus mauris vehicula, vulputate lorem. Nam a neque id dolor molestie pharetra malesuada in eros.
-        </p>
+        <p class='storyText' id='content'></p>
         <h2 id='end-text'></h2>
+        
         <div id='form-box'>
           <input type='text' id='title-form' placeholder='Title...'/>
           <input type='text' id='author-form' placeholder="Author's name"/>
           <textarea id='content-form' placeholder='Content...'></textarea>
-          <button class="publish-content" id='submit'>Publish</button>
+          
+          <button class='publish-content' id='submit'>Publish</button>
+
           <p>Is this the end of the story?</p>
           <input type='checkbox' id='is-ending'/>
-          <ul id='error-box'></ul>
+          <label for='is-ending'></label>
+
+          <ul id='error-box'></ul> 
+
         </div>
 
-        <div class='navigate-story'>
-          <button class='story-option pirate' id='a'></button>
+        <nav class='navigate-story'>
+          <button class='story-option adventure' id='a'></button>
 
           <div id='spin-button'>
             <button class='quarter top-left' id='reset'></button>
@@ -64,8 +68,8 @@
           </div>
           <div id='spin-button-overlay'></div>
 
-          <button class='story-option pirate' id='b'></button>
-        </div>
+          <button class='story-option adventure' id='b'></button>
+        </nav>
       </section>
 
     </div><!--end wrapper-->
