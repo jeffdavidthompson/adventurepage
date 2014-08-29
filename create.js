@@ -1,12 +1,15 @@
+//declares all jquery vars
 var titleForm = $('#title-form')
 var authorForm = $('#author-form')
 var contentForm = $('#content-form')
 var errorBox = $('#error-box')
 var errorDiv = $('.error-div')
 var submit = $('#submit')
+//creates object for cloud data from firebase
 var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/stories');
+//firebase data will be stored in data
 var data
-
+//puts together a root node based on form values, submits to cloud
 createItem = function(){
   item1 = {
     'address' : 'x',
@@ -22,7 +25,7 @@ createItem = function(){
   console.log(item3)
   cloudData.update(item3);
 }
-
+//checks for errors, then submits to cloud if there are none
 submitForm = function(){
   errorString = '';
   if (!titleForm.val()){
@@ -49,8 +52,9 @@ submitForm = function(){
     location.assign('adventure.html?story=stories/'+titleForm.val())
   }
 }
+//listens for submit button click, submits on click
 submit.click(function(){submitForm()})
-
+//grabs data from cloud
 cloudData.on('value', function (snapshot) {
   data = (snapshot.val());
 })
