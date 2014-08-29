@@ -1,9 +1,4 @@
 /* Space Page Layout */
-
-#subnav ul li {
-  display: inline-block;
-}
-
 .space-main-content {
   background: url(../images/deepspace.jpg) no-repeat fixed;
   -webkit-background-size: cover;
@@ -35,10 +30,28 @@
   font-family: 'Cuprum', cursive;
 }
 
+#popup-back {
+  margin-top: 10px;
+  margin-right: 5%;
+  float: right;
+  color: white;
+  font-weight: bold;
+  font-family: 'Cookie', cursive;
+  display: none;
+}
+ 
+#popup-reset {
+  margin-top: 10px;
+  margin-left: 5%;
+  float: left;
+  color: white;
+  font-weight: bold;
+  font-family: 'Cookie', cursive;
+  display: none;
+}
+
 .navigate-story {
-  margin-top: 150px;
-  margin-left: 10%;
-  padding-bottom: 10px;
+  margin-top: 90px;
 }
 
 #spin-button {
@@ -46,13 +59,14 @@
   margin-top: 10px;
   display: inline-block;
   position: absolute;
+  z-index: 100;
+  opacity: 0;
 }
 
 .quarter {
   width: 50px;
   height: 50px;
   background-color: #db1d5d;
-  opacity: 0;
 }
 
 .top-left {
@@ -103,6 +117,7 @@
 }
 
 .story-option {
+  margin-left: 50px;
   border-style: none;
   width: 35%;
   margin-bottom: 20px;
@@ -135,14 +150,13 @@
 
 #form-box {
   height: 450px;
-  display: none;
 }
 
 #form-box input, #content-form {
   margin: 0px auto 5px auto;
   border: none;
   width: 90%;
-  height: 30px;
+  height: 40px;
   padding-left: 40px;
   font-size: 1.5em;
   font-family: 'Cookie', cursive;
@@ -153,11 +167,35 @@
   margin-bottom: 20px;
 }
 
-.is-ending-content {
-  margin-top: 10px;
+#form-box p {
+  margin-top: 20px;
   font-size: 1.8em;
+  margin-left: 160px;
+  color: white;
+  font-size: 1.6em;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+}
+ 
+input[type=checkbox] {
+  opacity: 0;
+}
+ 
+#form-box label {
+  margin-top: -110px;
+  margin-right: 60px;
   float: right;
-  margin-right: 20px;
+  height: 50px;
+  width: 60px;
+  background-color: #F64870;
+  border: 2px solid grey;
+  border-radius: 3%;
+  display: inline-block;
+}
+ 
+input[type=checkbox]:checked ~ label {
+  background: url(../images/checkmark.png) center no-repeat;
+  background-size: 60px 50px;
 }
 
 button {
@@ -167,18 +205,13 @@ button {
 }
 
 .publish-content {
-  margin-left: 20px;
+  margin-top: 10px;
+  margin-left: 45px;
   width: 30%;
   background-color: #2236f2;
   color: white;
   font-size: 1.5em;
   float: left;
-}
-
-footer {
-  height: 20px;
-  position: fixed;
-  bottom: 0;
 }
 
 /* Spinning Radiant Circle 
@@ -199,14 +232,198 @@ footer {
   display: inline-block;
   z-index: -100;
 
-  background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #ff5aa5 0%, #ef1111 100%);
-  background-image: -webkit-radial-gradient(45px 45px, circle cover, #ff5aa5, #ef1111);
-  background-image: radial-gradient(45px 45px 45deg, circle cover, #ff5aa5 0%, #ef1111 100%);
-  
-  -webkit-animation-name: spin; 
-  -webkit-animation-duration: 3s; 
-  -webkit-animation-iteration-count: 1; 
+    background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+  background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+  background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+ 
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
 }
-
-
+ 
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  #spin-button {
+    display: none;
+  }
+ 
+  #spin-button-overlay {
+    display: none;
+  }
+ 
+  .navigate-story {
+    margin-top: 75px;
+  }
+  .story-option {
+    margin-left: 25px;
+  }
+ 
+  #form-box p {
+    margin-top: 15px;
+    font-size: 1.8em;
+    margin-left: 30px;
+    font-size: 1.5em;
+  }
+ 
+  #form-box label {
+    margin-top: -105px;
+    margin-right: 50px;
+    float: right;
+    height: 30px;
+    width: 30px;
+  }
+ 
+  input[type=checkbox]:checked ~ label {
+    background: url(../images/checkmark.png) center no-repeat;
+    background-size: 30px 30px;
+  }
+}
+ 
+ 
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .headerText {
+    font-size: 3.8em;
+  }
+ 
+  #title {
+    font-size: 3em;
+  }
+ 
+  #author {
+    font-size: 1.5em;
+  }
+ 
+  .storyText {
+    font-size: 1.5em;
+  }
+ 
+  .navigate-story {
+    margin-top: 60px;
+  }
+ 
+  #spin-button {
+    display: none;
+  }
+ 
+  #spin-button-overlay {
+    display: none;
+  }
+ 
+  .story-option {
+    margin-left: 16px;
+    width: 90%;
+    height: 50px;
+    font-size: 1.4em;
+  }
+ 
+  #b {
+    margin-top: -30px;
+  }
+ 
+  .storyBackground {
+    height: 500px; 
+  }
+ 
+  .publish-content {
+    margin-left: 20px;
+    width: 45%;
+    font-size: 1.2em;
+  }
+ 
+  #form-box p {
+    margin-top: 10px;
+    font-size: 1.8em;
+    margin-left: 20px;
+    font-size: 1.5em;
+  }
+ 
+  #form-box label {
+    margin-top: -88px;
+    margin-right: 20px;
+    float: right;
+    height: 30px;
+    width: 30px;
+  }
+ 
+  input[type=checkbox]:checked ~ label {
+    background: url(../images/checkmark.png) center no-repeat;
+    background-size: 30px 30px;
+  }
+}
+ 
+ 
+@media only screen and (max-width: 479px) {
+  .headerText {
+    font-size: 3em;
+  }
+  
+  #title {
+    font-size: 2em;
+  }
+ 
+  #author {
+    margin-top: -10px;
+    font-size: 1.2em;
+  }
+  .storyText {
+    font-size: 1.2em;
+  }
+ 
+  .navigate-story {
+    margin-top: 60px;
+  }
+ 
+  #spin-button {
+    display: none;
+  }
+ 
+  #spin-button-overlay {
+    display: none;
+  }
+ 
+  .story-option {
+    margin-left: 12px;
+    width: 90%;
+    height: 50px;
+    font-size: 1em;
+  }
+ 
+  #b {
+    margin-top: -50px;
+  }
+ 
+  .storyBackground {
+    height: 500px; 
+  }
+ 
+  .publish-content {
+    margin-left: 20px;
+    width: 45%;
+    font-size: 1.2em;
+  }
+ 
+  #form-box p {
+    margin-top: 10px;
+    font-size: 1.8em;
+    margin-left: 20px;
+    font-size: 1.1em;
+  }
+ 
+  #form-box label {
+    margin-top: -85px;
+    margin-right: 20px;
+    float: right;
+    height: 25px;
+    width: 25px;
+  }
+ 
+  input[type=checkbox]:checked ~ label {
+    background: url(../images/checkmark.png) center no-repeat;
+    background-size: 25px 25px;
+  }
+ 
+}
