@@ -2,7 +2,6 @@
 <head>
   <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
   <link rel="stylesheet" type="text/css" href="stylesheets/base.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/create.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/menu.css">
 </head>
@@ -23,14 +22,14 @@
   </nav>
   <h1>Create a new adventure</h1>
     <div class="container">
-      <p>Choose a title: <input class="sixteen columns" type='text' id='title-form' placeholder='Title'/><br/></p>
-      <p>Enter your name: <input class="sixteen columns" type='text' id='author-form' placeholder="Author's name" /><br /></p>
+      <p>Choose a title: <input class='input' type='text' id='title-form' placeholder='Title'/><br/></p>
+      <p>Enter your name: <input class='input' type='text' id='author-form' placeholder="Author's name" /><br /></p>
       <p>Enter the first scene. Be creative and descriptive!
         <textarea class='text-area' id='content-form' placeholder='Content'></textarea>
       </p>
-      <div class="six columns">&nbsp;</div>
-      <button id='submit' class="four columns">Publish</button>
-      <div class='clear'></div>
+      <p class="button-holder">
+        <button id='submit'>Publish</button>
+      </p>
       <div class='error-div'>
         <ul id='error-box'></ul>
       </div>
