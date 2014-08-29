@@ -20,9 +20,9 @@ var isEnding = $('#is-ending');
 var authorForm = $('#author-form');
 var submit = $('#submit');
 var currentAddress = 'x';
-
 var story;
 var nodes={};
+//returns URL variables in a JS object
 function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -30,6 +30,7 @@ function getUrlVars() {
     });
     return vars;
 }
+//checks if URL has a story variable, shows "not found" if not
 if(getUrlVars()['node']){
   currentAddress = getUrlVars()['node'];
 }
@@ -39,9 +40,9 @@ if(getUrlVars()['story']){
 else{
   $('body').html('<center><h1 style="margin-top: 50px">404 - Page not found</h1></center>');
 }
-
+//cloud data imported from firebase
 var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/'+story);
-
+//writes data to cloud
 write = function(address, title, content, ending, author){
   nodes[address] = {
     'address' : address,
@@ -54,12 +55,12 @@ write = function(address, title, content, ending, author){
   item[address] = nodes[address];
   cloudData.update(item);
 }
-
+//jumps to a node and displays it
 read = function(address){
     currentAddress = address;
     display();
   }
-
+//moves one node down the tree
 traverse = function(choice){
   if (nodes.hasOwnProperty(currentAddress+choice)){
     currentAddress+=choice;
@@ -70,7 +71,7 @@ traverse = function(choice){
     displayForm();
   }
 }
-
+//displays all content on an existing node, hides all content we don't want to see
 display = function(){
   var node = nodes[currentAddress];
   console.log(currentAddress);
@@ -103,7 +104,7 @@ display = function(){
     }
   }
 }
-
+//checks for errors in new node form. If none are found, writes the new node to database
 submitForm = function(){
   errorString = '';
   if (!titleForm.val()){
@@ -127,7 +128,7 @@ submitForm = function(){
     clearForm();
   }
 }
-
+//shows form for creating a new node
 displayForm = function(){
     formBox.css('display', 'block');
     isEnding.css('display', 'inline');
@@ -148,14 +149,13 @@ function Node(address, title, content, ending, author){
   this.event = null;
   this.author = author || 'Anonymous';
 }
-
-function clearForm(){
+//clears values from new node form when submitted
+clearForm = function(){
   titleForm[0].value='';
   contentForm[0].value='';
   authorForm[0].value='';
   isEnding[0].checked=false;
 }
-
 //displays the node at address '' or specified in url
 //event handling
 buttonA.click(function(){traverse('a')});
@@ -167,8 +167,7 @@ previous.click(function(){
   else{}})
 reset.click(function(){read('x')});
 submit.click(function(){submitForm()});
-// submit.click(function(){display()})
-// submit.click(function(){clearForm()})
+//loads cloud data and stores in variable nodes, makes sure display() is caled only after data is loaded, updates title text.
 var initialized = false;
 cloudData.on('value', function (snapshot) {
   nodes = (snapshot.val());

@@ -1,96 +1,95 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Fantastical Adventures</title>
-  <link rel="stylesheet" type="text/css" href="stylesheets/base.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/layout.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/index_animations.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/menu.css">
-  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-  <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
-</head>
-<body>
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Fantastical Adventures</title>
+   <link rel="stylesheet" type="text/css" href="stylesheets/base.css">
+   <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css">
+   <link rel="stylesheet" type="text/css" href="stylesheets/layout.css">
+   <link rel="stylesheet" type="text/css" href="stylesheets/index_animations.css">
+   <link rel="stylesheet" type="text/css" href="stylesheets/menu.css">
+   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+   <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+ </head>
+ <body>
 
-  <nav class='topMenu'>
-    <div class="toggleNav">
-      <div class="toggleNavButton">
-      </div>
-    </div>
-    <div id="subnav">
-      <ul>
-        <a href="index.html"><li><span class='menuButtonText'>Home</span></li></a>
-        <a href="about.html"><li><span class='menuButtonText'>About</span></li></a>
-        <a href="create.html"><li><span class='menuButtonText'>Create</span></li></a>
-        <a href="profile.html"><li><span class='menuButtonText'>Profile</span></li></a>
-      </ul>
-    </div>
-  </nav>
+   <nav class='topMenu'>
+     <div class="toggleNav">
+       <div class="toggleNavButton">
+       </div>
+     </div>
+     <div id="subnav">
+       <ul>
+         <a href="index.html"><li><span class='menuButtonText'>Home</span></li></a>
+         <a href="about.html"><li><span class='menuButtonText'>About</span></li></a>
+         <a href="create.html"><li><span class='menuButtonText'>Create</span></li></a>
+         <a href="profile.html"><li><span class='menuButtonText'>Profile</span></li></a>
+       </ul>
+     </div>
+   </nav>
 
-  <header>
-    <h1 class='headerText'>Magical Worlds of Adventure</h1>
+   <header>
+     <h1 class='headerText'>Magical Worlds of Adventure</h1>
 
-    <div class='menu'>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+     <div class='menu'>
+       <div></div>
+       <div></div>
+       <div></div>
+     </div>
 
-  </header>
-  <div class='container'>
-    <div class='sixteen columns story' id='firstStory'>
+   </header>
+   <div class='container'>
+     <div class='sixteen columns story' id='firstStory'>
 
-      <a href="pirate.html?story=pirate&amp;node=xa">
-        <div class='option leftChoice pirate'>
-          <p id='pirate-choice-a'></p>
-        </div>
-      </a>
-
+       <a href="pirate.html?story=pirate&amp;node=xa">
+         <div class='option leftChoice pirate'>
+           <p id='pirate-choice-a'></p>
+         </div>
+       </a>
+       <a href="pirate.html?story=pirate">
         <h2 class='storyTitle'>Loot on the high Seas</h2>
+       </a>
+       <a href="pirate.html?story=pirate&amp;node=xa">
+         <div class='option rightChoice pirate'>
+           <p id='pirate-choice-b'></p>
+         </div>
+       </a>
+     </div>
+     <div class='sixteen columns story' id='secondStory'>
+       <a href="space.html?story=space&amp;node=xa">
+         <div class='option leftChoice space'>
+           <p id='space-choice-a'></p>
+         </div>
+       </a>
+       <a href="space.html?story=space">
+         <h2 class='storyTitle'>Galaxies Unknown</h2>
+       </a>
+       <a href="space.html?story=space&amp;node=xb">
+         <div class='option rightChoice space'>
+           <p id='space-choice-b'></p>
+         </div>
+       </a>
+     </div>
 
-      <a href="pirate.html?story=pirate&amp;node=xa">
-        <div class='option rightChoice pirate'>
-          <p id='pirate-choice-b'></p>
-        </div>
-      </a>
-    </div>
-    <div class='sixteen columns story' id='secondStory'>
-      <a href="space.html?story=space&amp;node=xa">
-        <div class='option leftChoice space'>
-          <p id='space-choice-a'></p>
-        </div>
-      </a>
-
-        <h2 class='storyTitle'>Galaxies Unknown</h2>
-
-      <a href="space.html?story=space&amp;node=xb">
-        <div class='option rightChoice space'>
-          <p id='space-choice-b'></p>
-        </div>
-      </a>
-    </div>
-
-    <div class='sixteen columns story' id='thirdStory'>
-      <a href="twerk.html?story=twerk&amp;node=xa">
-        <div class='option leftChoice twerk'>
-          <p id='twerk-choice-a'></p>
-        </div>
-      </a>
-      
+     <div class='sixteen columns story' id='thirdStory'>
+       <a href="twerk.html?story=twerk&amp;node=xa">
+         <div class='option leftChoice twerk'>
+           <p id='twerk-choice-a'></p>
+         </div>
+       </a>
+       <a href="twerk.html?story=twerk">
         <h2 class='storyTitle'>Twerk Alert</h2>
+       </a>
+       <a href="twerk.html?story=twerk&amp;node=xb">
+         <div class='option rightChoice twerk'>
+           <p id='twerk-choice-b'></p>
+         </div>
+       </a>
+     </div>
+     <div id='otherStories'></div>
+   </div>
 
-      <a href="twerk.html?story=twerk&amp;node=xb">
-        <div class='option rightChoice twerk'>
-          <p id='twerk-choice-b'></p>
-        </div>
-      </a>
-    </div>
-    <div id='otherStories'>
-    </div>
-  </div>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script type="text/javascript" src="index.js"></script>
-  <script type="text/javascript" src="scripts/nav.js"></script>
-</body>
-</html>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <script type="text/javascript" src="index.js"></script>
+ <script type="text/javascript" src="scripts/nav.js"></script>
+ </body>
+ </html>

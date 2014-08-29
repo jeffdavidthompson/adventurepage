@@ -1,3 +1,4 @@
+//declares all Jquery vars
 var pirateLeft = $('#firstStory .leftChoice')
 var pirateRight = $('#firstStory .rightChoice')
 var spaceLeft = $('#secondStory .leftChoice')
@@ -12,9 +13,10 @@ var cloudData = new Firebase('https://fiery-torch-4185.firebaseio.com/');
 var data = {}
 
 
-
+// grabs data
 cloudData.on('value', function (snapshot) {
   data = (snapshot.val());
+// populates featured stories
   pirateRight.html('<p>'+data['pirate']['xb'].title+'</p>')
   pirateLeft.html('<p>'+data['pirate']['xa'].title+'</p>')
   spaceLeft.html('<p>'+data['space']['xa'].title+'</p>')
@@ -24,8 +26,7 @@ cloudData.on('value', function (snapshot) {
   pirateText.html('<p>'+data['pirate']['x'].content+'</p>')
   spaceText.html('<p>'+data['space']['x'].content+'</p>')
   twerkText.html('<p>'+data['twerk']['x'].content+'</p>')
-
-  console.log(data['stories'])
+//populates user-created stories
   container.html('')
   for (e in data['stories']){
     container.append('<a href="adventure.html?story=stories/'+data["stories"][e]["x"]["title"]+'"><div class="sixteen columns story user-created"><h2 class="storyTitle">'+data["stories"][e]["x"]["title"]+'</h2></div></a>'
