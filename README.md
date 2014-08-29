@@ -25,6 +25,8 @@ Code Sources:
 
 http://papermashup.com/read-url-get-variables-withjavascript/
 
+http://css-tricks.com/adding-stroke-to-web-text/
+
 -----------
 
 Cloud Service:
