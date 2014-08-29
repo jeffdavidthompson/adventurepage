@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Fantastical Adventures</title>
-    <link rel="stylesheet" type="text/css" href="stylesheets/base.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/space.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/menu.css">
-    <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-    <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
-  </head>
-
-  <body class='space-main-content'>
-
-
-   <!-- here -->
-
-<nav class='topMenu'>
-
-  <div class="toggleNav">
-    <div class="toggleNavButton">
+<head>
+  <meta charset="UTF-8">
+  <title>Fantastical Adventures</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/base.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/space.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/menu.css">
+  <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+</head>
+<body class='space-main-content'>
+  <nav class='topMenu'>
+    <div class="toggleNav">
+      <div class="toggleNavButton">
+      </div>
     </div>
-  </div>
     <div id="subnav">
       <ul>
         <a href="index.html"><li><span class='menuButtonText'>Home</span></li></a>
@@ -31,53 +25,43 @@
         <a href="profile.html"><li><span class='menuButtonText'>Profile</span></li></a>
       </ul>
     </div>
+  </nav>
+  <div class='container'>
+    <header>
+      <h1 class='headerText'>Galaxies Unknown</h1>
+    </header>
+    <section class='sixteen columns storyBackground' id='background'>
 
-</nav>
-
-  <!-- here --> 
-
-    <div class='container'>
-
-      <header>
-        <h1 class='headerText'>Galaxies Unknown</h1>
-      </header>
-
-      <section class='sixteen columns storyBackground' id='background'>
-
-        <h2 id='title'></h2>
-        <h2 id='author'></h2>
-        <p class='storyText' id='content'>
-          Loading...
-        </p>
-        <h2 id='end-text'></h2>
-        <div id='form-box'>
-          <input type='text' id='title-form' placeholder='Title...'/>
-          <input type='text' id='author-form' placeholder="Author's name"/>
-          <textarea id='content-form' placeholder='Content...'></textarea>
-          <button class="publish-content" id='submit'>Publish</button>
-          <p>Is this the end of the story?</p>
-          <input type='checkbox' id='is-ending'/>
-          <ul id='error-box'></ul>
+      <h2 id='title'></h2>
+      <h2 id='author'></h2>
+      <p class='storyText' id='content'>
+        Loading...
+      </p>
+      <h2 id='end-text'></h2>
+      <div id='form-box'>
+        <input type='text' id='title-form' placeholder='Title...'/>
+        <input type='text' id='author-form' placeholder="Author's name"/>
+        <textarea id='content-form' placeholder='Content...'></textarea>
+        <button class="publish-content" id='submit'>Publish</button>
+        <p>Is this the end of the story?</p>
+        <input type='checkbox' id='is-ending'/>
+        <ul id='error-box'></ul>
+      </div>
+      <nav class='navigate-story'>
+        <button class='story-option space' id='a'></button>
+        <div id='spin-button'>
+          <button class='quarter top-left' id='reset'></button>
+          <button class='quarter top-right' id='back'></button>
+          <div class='quarter bottom-left' id='bottom-left'></div>
+          <div class='quarter bottom-right' id='bottom-right'></div>
         </div>
-
-        <nav class='navigate-story'>
-          <button class='story-option space' id='a'></button>
-
-          <div id='spin-button'>
-            <button class='quarter top-left' id='reset'></button>
-            <button class='quarter top-right' id='back'></button>
-            <div class='quarter bottom-left' id='bottom-left'></div>
-            <div class='quarter bottom-right' id='bottom-right'></div>
-          </div>
-          <div id='spin-button-overlay'></div>
-
-          <button class='story-option space' id='b'></button>
-        </nav>
-      </section>
-
-    </div>
-    <script type="text/javascript" src="storyTree/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="storyTree/tree.js"></script>
-    <script type="text/javascript" src="scripts/nav.js"></script>
-  </body>
+        <div id='spin-button-overlay'></div>
+        <button class='story-option space' id='b'></button>
+      </nav>
+    </section>
+  </div>
+  <script type="text/javascript" src="storyTree/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="storyTree/tree.js"></script>
+  <script type="text/javascript" src="scripts/nav.js"></script>
+</body>
 </html>
