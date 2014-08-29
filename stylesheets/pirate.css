@@ -243,6 +243,15 @@ button {
   -webkit-animation-timing-function: linear;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .navigate-story {
+    margin-top: 75px;
+  }
+  .story-option {
+    margin-left: 25px;
+  }
+}
+
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .headerText {
     font-size: 3.8em;
@@ -312,7 +321,6 @@ button {
     background: url(../images/checkmark.png) center no-repeat;
     background-size: 30px 30px;
   }
-
 }
 
 @media only screen and (max-width: 479px) {
