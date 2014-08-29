@@ -34,22 +34,22 @@
 
 #popup-back {
   margin-top: 10px;
-  margin-right: 5%;
+  margin-left: 75%;
   float: right;
-  color: white;
-  font-weight: bold;
-  font-family: 'Cookie', cursive;
   display: none;
+  width: 21%;
+  height: 21%;
+  position: absolute;
 }
 
 #popup-reset {
   margin-top: 10px;
   margin-left: 5%;
   float: left;
-  color: white;
-  font-weight: bold;
-  font-family: 'Cookie', cursive;
   display: none;
+  width: 21%;
+  height: 21%; 
+  position: absolute;
 }
 
 .navigate-story {
@@ -222,6 +222,10 @@ button {
 @-webkit-keyframes spin {
   from { -webkit-transform: rotate(360deg); }
   to { -webkit-transform: rotate(0deg); }
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(360deg); }
+  to { -moz-transform: rotate(0deg); }
 }
 
 #spin-button-overlay {
