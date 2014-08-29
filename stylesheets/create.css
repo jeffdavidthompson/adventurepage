@@ -9,19 +9,22 @@ h1 {
 .container {
   background-color: #0C687F;
   padding-bottom: 10px;
+  width: 80%;
+  margin: auto;
+  padding-top: 10px
 }
 
 p {
-  width: 920px;
-  margin-left: 10px;
+  width: 96%;
+  margin: auto;
   color: white;
   font-size: 18px;
-  padding-top: 25px;
+  margin-top: 10px
 }
 
 .error-div {
-  margin-left: 20px;
-  width: 900px;
+  margin: auto;
+  width: 95%;
   background-color: white;
   border-radius: 10px;
   padding-left: 20px;
@@ -40,8 +43,12 @@ li {
 }
 
 .text-area {
-  margin-left: 10px;
-  width: 920px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+p.button-holder{
+  text-align: center
 }
 
 #submit {
@@ -50,6 +57,12 @@ li {
   background-color: #FF8719;
   height: 50px;
   font-size: 24px;
+  margin: auto;
+}
+
+input.input {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 #submit:hover {
