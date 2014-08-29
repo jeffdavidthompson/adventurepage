@@ -3,6 +3,10 @@
 
 .main-content {
   background-color: #3A40DB;
+  background: url(../images/graffetti.jpg) center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 #author {
@@ -34,6 +38,7 @@ header {
   float: right;
   color: white;
   font-weight: bold;
+  font-size: 3em;
   font-family: 'Cookie', cursive;
   display: none;
 }
@@ -41,6 +46,7 @@ header {
 #popup-reset {
   margin-top: 10px;
   margin-left: 5%;
+  font-size: 3em;
   float: left;
   color: white;
   font-weight: bold;
@@ -105,12 +111,10 @@ header {
 }
 
 .storyBackground {
-  background: url(../images/graffetti.jpg) center no-repeat;
-  background-size: 100%;
   height: 450px;
-  margin: 20px auto 50px auto;
-  padding-bottom: 10px; 
-
+  margin: 30px auto 50px auto;
+  padding-bottom: 10px;
+  background-color: rgba(0, 3, 192, 0.6);
 }
 
 .storyBackground h2, .storyBackground h3 {
@@ -128,12 +132,12 @@ header {
 
 .twerk#a {
   color: white;
-  background-color: #2236f2;
+  background-color: #13D8C0;
 }
 
 .twerk#a:hover, .publish-content:hover {
   background: transparent;
-  background-color: rgba(34, 54, 242, 0.8);
+  background-color: rgba(19, 216, 192, 0.8);
   color: white;
 }
 
@@ -159,7 +163,7 @@ header {
   height: 40px;
   padding-left: 40px;
   font-size: 1.5em;
-  font-family: 'Cookie', cursive; 
+  font-family: 'Cookie', cursive;
 }
 
 #content-form {
@@ -242,17 +246,211 @@ button {
   -webkit-animation-duration: 3s; 
   -webkit-animation-iteration-count: infinite; 
   -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin; 
+  -moz-animation-duration: 3s; 
+  -moz-animation-iteration-count: infinite; 
+  -moz-animation-timing-function: linear;
 }
 
 /* Media Queries */
 
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+  #spin-button {
+    display: none;
+  }
+
+  #spin-button-overlay {
+    display: none;
+  }
+
+  .navigate-story {
+    margin-top: 75px;
+  }
+  .story-option {
+    margin-left: 25px;
+  }
+
+  #form-box p {
+    margin-top: 15px;
+    font-size: 1.8em;
+    margin-left: 30px;
+    font-size: 1.5em;
+  }
+
+  #form-box label {
+    margin-top: -105px;
+    margin-right: 50px;
+    float: right;
+    height: 30px;
+    width: 30px;
+  }
+
+  input[type=checkbox]:checked ~ label {
+    background: url(../images/checkmark.png) center no-repeat;
+    background-size: 30px 30px;
+  }
+}
+
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+
+  header {
+    margin-top: 80px;
+    background: url(../images/twerk_alert.png) center no-repeat;
+    background-size: 80%;
+    margin-bottom: 20px;
+  }
+
+  .headerText {
+    font-size: 3.8em;
+  }
+
+  #title {
+    font-size: 3em;
+  }
+
+  #author {
+    font-size: 1.5em;
+  }
+
+  .storyText {
+    font-size: 1.5em;
+  }
+
+  .navigate-story {
+    margin-top: 60px;
+  }
+
+  #spin-button {
+    display: none;
+  }
+
+  #spin-button-overlay {
+    display: none;
+  }
+
+  .story-option {
+    margin-left: 16px;
+    width: 90%;
+    height: 50px;
+    font-size: 1.4em;
+  }
+
+  #b {
+    margin-top: -30px;
+  }
+
+  .storyBackground {
+    height: 500px; 
+  }
+
+  .publish-content {
+    margin-left: 20px;
+    width: 45%;
+    font-size: 1.2em;
+  }
+
+  #form-box p {
+    margin-top: 10px;
+    font-size: 1.8em;
+    margin-left: 20px;
+    font-size: 1.5em;
+  }
+
+  #form-box label {
+    margin-top: -88px;
+    margin-right: 20px;
+    float: right;
+    height: 30px;
+    width: 30px;
+  }
+
+  input[type=checkbox]:checked ~ label {
+    background: url(../images/checkmark.png) center no-repeat;
+    background-size: 30px 30px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  header {
+    margin-top: 80px;
+    background: url(../images/twerk_alert.png) center no-repeat;
+    background-size: 80%;
+    margin-bottom: 20px;
+  }
   
- 
+  .headerText {
+    font-size: 3em;
+  }
+  
+  #title {
+    font-size: 2em;
+  }
 
+  #author {
+    margin-top: -10px;
+    font-size: 1.2em;
+  }
+  .storyText {
+    font-size: 1.2em;
+  }
 
+  .navigate-story {
+    margin-top: 60px;
+  }
+
+  #spin-button {
+    display: none;
+  }
+
+  #spin-button-overlay {
+    display: none;
+  }
+
+  .story-option {
+    margin-left: 12px;
+    width: 90%;
+    height: 50px;
+    font-size: 1em;
+  }
+
+  #b {
+    margin-top: -50px;
+  }
+
+  .storyBackground {
+    height: 500px; 
+  }
+
+  .publish-content {
+    margin-left: 20px;
+    width: 45%;
+    font-size: 1.2em;
+  }
+
+  #form-box p {
+    margin-top: 10px;
+    font-size: 1.8em;
+    margin-left: 20px;
+    font-size: 1.1em;
+  }
+
+  #form-box label {
+    margin-top: -85px;
+    margin-right: 20px;
+    float: right;
+    height: 25px;
+    width: 25px;
+  }
+
+  input[type=checkbox]:checked ~ label {
+    background: url(../images/checkmark.png) center no-repeat;
+    background-size: 25px 25px;
+  }
 
 }
+
+
 
   
 
