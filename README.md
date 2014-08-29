@@ -1,6 +1,16 @@
 adventurepage
 =============
 
+This project is an interactive storytelling app. The goal is to create a visually engaging, interactive experience for users that encourages them to dive into the stories with a simple interface.
+
+The main function of this site is that there are a number of user-created "stories". Each story is composed of nodes, and the reader will be presented with two choices at each node, each of which will direct them to a new node written by a user based on that choice. If they get to a point where two choices have not been previously created by users, users will have the option to "choose your own adventure," which will prompt them to create a choice and the content of the next bit of the story. This will be stored remotely, and can be viewed by all users.
+
+There is also a page that allows users to create entirely new adventures with a simple form, and those will be posted on the index page.
+
+This is made possible by storing the ndoes as JSON objects on the firebase cloud service, each with a unique address which is found based on the choices that the user has made.
+
+------------
+
 Image sources:
 
 http://lightpaintingphotography.com/wp-content/uploads/2010/12/deepspace4.jpg
@@ -27,8 +37,14 @@ http://papermashup.com/read-url-get-variables-withjavascript/
 
 http://css-tricks.com/adding-stroke-to-web-text/
 
+http://davidwalsh.name/css-circles
+
+http://css-tricks.com/the-checkbox-hack/
+
 -----------
 
 Cloud Service:
 
 https://www.firebase.com/
+
+
