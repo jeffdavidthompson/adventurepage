@@ -37,7 +37,12 @@
 }
 
 #firstStory .story-center p{
-  color: #F00;
+  color: black;
+  text-shadow:
+   -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+     1px 1px 0 #FFF;
 }
 
 /* Smaller than standard 960 (devices and browsers) */
