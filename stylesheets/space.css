@@ -32,23 +32,24 @@
 
 #popup-back {
   margin-top: 10px;
-  margin-right: 5%;
+  margin-left: 75%;
   float: right;
-  color: white;
-  font-weight: bold;
-  font-family: 'Cookie', cursive;
   display: none;
+  width: 21%;
+  height: 21%;
+  position: absolute;
 }
- 
+
 #popup-reset {
   margin-top: 10px;
   margin-left: 5%;
   float: left;
-  color: white;
-  font-weight: bold;
-  font-family: 'Cookie', cursive;
   display: none;
+  width: 21%;
+  height: 21%; 
+  position: absolute;
 }
+
 
 .navigate-story {
   margin-top: 90px;
