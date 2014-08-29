@@ -248,13 +248,42 @@ button {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+  #spin-button {
+    display: none;
+  }
+
+  #spin-button-overlay {
+    display: none;
+  }
+
   .navigate-story {
     margin-top: 75px;
   }
   .story-option {
     margin-left: 25px;
   }
+
+  #form-box p {
+    margin-top: 15px;
+    font-size: 1.8em;
+    margin-left: 30px;
+    font-size: 1.5em;
+  }
+
+  #form-box label {
+    margin-top: -105px;
+    margin-right: 50px;
+    float: right;
+    height: 30px;
+    width: 30px;
+  }
+
+  input[type=checkbox]:checked ~ label {
+    background: url(../images/checkmark.png) center no-repeat;
+    background-size: 30px 30px;
+  }
 }
+
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .headerText {
@@ -326,6 +355,7 @@ button {
     background-size: 30px 30px;
   }
 }
+
 
 @media only screen and (max-width: 479px) {
   .headerText {
