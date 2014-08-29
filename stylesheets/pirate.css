@@ -243,3 +243,153 @@ button {
   -webkit-animation-timing-function: linear;
 }
 
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .headerText {
+    font-size: 3.8em;
+  }
+
+  #title {
+    font-size: 3em;
+  }
+
+  #author {
+    font-size: 1.5em;
+  }
+
+  .storyText {
+    font-size: 1.5em;
+  }
+
+  .navigate-story {
+    margin-top: 60px;
+  }
+
+  #spin-button {
+    display: none;
+  }
+
+  #spin-button-overlay {
+    display: none;
+  }
+
+  .story-option {
+    margin-left: 16px;
+    width: 90%;
+    height: 50px;
+    font-size: 1.4em;
+  }
+
+  #b {
+    margin-top: -30px;
+  }
+
+  .storyBackground {
+    height: 500px; 
+  }
+
+  .publish-content {
+    margin-left: 20px;
+    width: 45%;
+    font-size: 1.2em;
+  }
+
+  #form-box p {
+    margin-top: 10px;
+    font-size: 1.8em;
+    margin-left: 20px;
+    font-size: 1.5em;
+  }
+
+  #form-box label {
+    margin-top: -88px;
+    margin-right: 20px;
+    float: right;
+    height: 30px;
+    width: 30px;
+  }
+
+  input[type=checkbox]:checked ~ label {
+    background: url(../images/checkmark.png) center no-repeat;
+    background-size: 30px 30px;
+  }
+
+}
+
+@media only screen and (max-width: 479px) {
+  .headerText {
+    font-size: 3em;
+  }
+  
+  #title {
+    font-size: 2em;
+  }
+
+  #author {
+    margin-top: -10px;
+    font-size: 1.2em;
+  }
+  .storyText {
+    font-size: 1.2em;
+  }
+
+  .navigate-story {
+    margin-top: 60px;
+  }
+
+  #spin-button {
+    display: none;
+  }
+
+  #spin-button-overlay {
+    display: none;
+  }
+
+  .story-option {
+    margin-left: 12px;
+    width: 90%;
+    height: 50px;
+    font-size: 1em;
+  }
+
+  #b {
+    margin-top: -50px;
+  }
+
+  .storyBackground {
+    height: 500px; 
+  }
+
+  .publish-content {
+    margin-left: 20px;
+    width: 45%;
+    font-size: 1.2em;
+  }
+
+  #form-box p {
+    margin-top: 10px;
+    font-size: 1.8em;
+    margin-left: 20px;
+    font-size: 1.1em;
+  }
+
+  #form-box label {
+    margin-top: -85px;
+    margin-right: 20px;
+    float: right;
+    height: 25px;
+    width: 25px;
+  }
+
+  input[type=checkbox]:checked ~ label {
+    background: url(../images/checkmark.png) center no-repeat;
+    background-size: 25px 25px;
+  }
+
+}
+
+
+
+  
+
+
+
